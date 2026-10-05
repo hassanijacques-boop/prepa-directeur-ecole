@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devenir Directeur d'École — Guide de préparation · M. Hassani Moustoifa</title>
+<style>
+  :root{
+    --navy:#12294d; --navy2:#1d3f6e; --bleu:#2563eb; --bleu-clair:#dbeafe;
+    --or:#b8860b; --rouge:#c0392b; --vert:#1a7a4a;
+    --txt:#1c2331; --muted:#5b6779; --line:#e2e8f0; --bg:#f7f9fc; --card:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       background:var(--bg);color:var(--txt);line-height:1.68;font-size:16px}
+
+  /* ── BARRE HAUTE ── */
+  .topbar{position:sticky;top:0;z-index:100;background:var(--navy);color:#fff;
+    padding:10px 16px;display:flex;align-items:center;justify-content:space-between;
+    box-shadow:0 2px 12px rgba(0,0,0,.18)}
+  .topbar .t{font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:9px}
+  .topbar .t span{opacity:.72;font-weight:500;font-size:.82rem}
+  .topbar a{color:#bcd4f5;text-decoration:none;font-size:.8rem;font-weight:600}
+
+  /* ── HERO ── */
+  .hero{background:linear-gradient(140deg,var(--navy) 0%,var(--navy2) 55%,#2a5c9e 100%);
+    color:#fff;padding:52px 20px 44px;text-align:center}
+  .hero .wrap{max-width:900px;margin:0 auto}
+  .hero .badge{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);
+    padding:5px 15px;border-radius:99px;font-size:.76rem;font-weight:700;letter-spacing:.9px;
+    text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:clamp(1.6rem,5vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:12px}
+  .hero h1 em{color:#8fbcf5;font-style:normal}
+  .hero p{color:#c8dbf5;font-size:clamp(.9rem,2.4vw,1.03rem);max-width:660px;margin:0 auto 22px}
+  .hero .stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+  .hero .stats div{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);
+    border-radius:11px;padding:10px 17px;font-size:.79rem}
+  .hero .stats b{display:block;font-size:1.25rem;color:#8fbcf5}
+
+  /* ── LAYOUT ── */
+  .layout{max-width:1280px;margin:0 auto;padding:26px 16px 70px;display:grid;
+    grid-template-columns:275px 1fr;gap:30px;align-items:start}
+  @media(max-width:900px){ .layout{grid-template-columns:1fr;padding-top:18px} }
+
+  /* ── SOMMAIRE ── */
+  .sidebar{position:sticky;top:70px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:16px;max-height:calc(100vh - 90px);overflow-y:auto}
+  @media(max-width:900px){ .sidebar{position:static;max-height:none;margin-bottom:8px} }
+  .sidebar h3{font-size:.72rem;text-transform:uppercase;letter-spacing:1.1px;color:var(--muted);
+    margin-bottom:11px;font-weight:800}
+  .sidebar nav a{display:flex;gap:9px;align-items:flex-start;padding:8px 10px;border-radius:9px;
+    color:var(--muted);text-decoration:none;font-size:.86rem;transition:.16s;margin-bottom:2px;line-height:1.35}
+  .sidebar nav a:hover{background:var(--bleu-clair);color:var(--bleu)}
+  .sidebar nav a.active{background:var(--navy);color:#fff;font-weight:700}
+  .sidebar nav a .n{font-weight:800;opacity:.6;font-size:.76rem;min-width:15px}
+
+  /* ── CONTENU ── */
+  main{min-width:0}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:26px 24px;margin-bottom:22px;box-shadow:0 1px 3px rgba(18,41,77,.05)}
+  @media(max-width:600px){ section{padding:20px 16px} }
+  .kicker{font-size:.72rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+    color:var(--bleu);margin-bottom:7px}
+  h2{font-size:clamp(1.22rem,3.4vw,1.6rem);font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:12px}
+  h3{font-size:1.03rem;font-weight:800;color:var(--navy);margin:22px 0 9px;display:flex;align-items:center;gap:9px}
+  h3 .ico{background:var(--bleu-clair);color:var(--bleu);width:27px;height:27px;border-radius:8px;
+    display:grid;place-items:center;font-size:.85rem;flex-shrink:0}
+  h4{font-size:.94rem;font-weight:800;color:var(--navy2);margin:16px 0 7px}
+  p{color:#33404f;margin-bottom:12px}
+  p strong,li strong{color:var(--navy);font-weight:700}
+  ul,ol{margin:10px 0 14px 21px;color:#33404f}
+  li{margin-bottom:7px}
+  a{color:var(--bleu)}
+
+  /* ── CARTES / GRILLES ── */
+  .grid{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));margin:15px 0}
+  .card{background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+  .card .ct{font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;gap:8px;align-items:center;font-size:.93rem}
+  .card p{font-size:.87rem;color:var(--muted);margin-bottom:0}
+
+  /* ── CALLOUTS ── */
+  .callout{border-radius:12px;padding:15px 17px;margin:15px 0;border-left:4px solid;font-size:.91rem}
+  .callout .ct{font-weight:800;margin-bottom:6px}
+  .callout.info{background:#eef5ff;border-color:var(--bleu)} .callout.info .ct{color:var(--bleu)}
+  .callout.warn{background:#fff8e8;border-color:var(--or)} .callout.warn .ct{color:#8a6508}
+  .callout.danger{background:#fdeeed;border-color:var(--rouge)} .callout.danger .ct{color:var(--rouge)}
+  .callout.ok{background:#eafaf1;border-color:var(--vert)} .callout.ok .ct{color:var(--vert)}
+  .callout p:last-child{margin-bottom:0}
+
+  /* ── TABLEAUX ── */
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.87rem}
+  th{background:var(--navy);color:#fff;padding:10px 12px;text-align:left;font-weight:700;font-size:.82rem}
+  td{border:1px solid var(--line);padding:10px 12px;color:#33404f;vertical-align:top}
+  tr:nth-child(even) td{background:#fafbfd}
+
+  /* ── LES 4 ÉTAPES (méthode) ── */
+  .methode{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:18px 0}
+  .etape{background:linear-gradient(160deg,#eef5ff,#fbfcfe);border:1px solid #c7dcfb;border-radius:13px;
+    padding:16px;text-align:center}
+  .etape .num{width:36px;height:36px;margin:0 auto 9px;border-radius:50%;background:var(--navy);color:#fff;
+    display:grid;place-items:center;font-weight:800;font-size:1rem}
+  .etape b{display:block;color:var(--navy);font-size:.95rem;margin-bottom:5px}
+  .etape span{font-size:.82rem;color:var(--muted);line-height:1.5;display:block}
+
+  /* ── FICHE CAS PRATIQUE ── */
+  .cas{border:1px solid var(--line);border-radius:14px;margin:18px 0;overflow:hidden;background:#fff}
+  .cas-head{background:var(--navy);color:#fff;padding:13px 17px;display:flex;gap:11px;align-items:center}
+  .cas-head .e{font-size:1.25rem}
+  .cas-head b{font-size:1rem;font-weight:800}
+  .cas-head small{display:block;opacity:.75;font-weight:500;font-size:.78rem;margin-top:2px}
+  .cas-body{padding:16px 17px}
+  .cas-body .bloc{margin-bottom:15px}
+  .cas-body .bloc:last-child{margin-bottom:0}
+  .bt{font-weight:800;font-size:.87rem;margin-bottom:7px;display:flex;align-items:center;gap:7px}
+  .bt.rouge{color:var(--rouge)} .bt.bleu{color:var(--bleu)}
+  .bt.or{color:#8a6508} .bt.vert{color:var(--vert)}
+  .cas-body ol,.cas-body ul{margin:6px 0 6px 20px;font-size:.88rem}
+  .cas-body li{margin-bottom:5px}
+  .cas-body p{font-size:.88rem;margin-bottom:8px}
+  .jury{background:#f3f0ff;border-left:3px solid #7c3aed;border-radius:9px;padding:12px 14px;
+    font-size:.86rem;color:#4c1d95;margin-top:12px}
+  .jury b{color:#5b21b6}
+
+  /* ── CHECKLIST ── */
+  .chk{list-style:none;margin-left:0}
+  .chk li{display:flex;gap:10px;align-items:flex-start;background:#fbfcfe;border:1px solid var(--line);
+    border-radius:9px;padding:10px 13px;margin-bottom:7px;font-size:.88rem}
+  .chk li::before{content:'☐';color:var(--bleu);font-size:1.1rem;line-height:1.2;flex-shrink:0}
+
+  /* ── SOURCES ── */
+  .ref{border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:10px;background:#fbfcfe}
+  .ref .rt{font-weight:800;color:var(--navy);font-size:.92rem;margin-bottom:4px}
+  .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+    padding:2px 9px;border-radius:99px;margin-right:6px}
+  .tag.loi{background:#fde8e8;color:#a01d1d} .tag.bo{background:#e6effd;color:#1a4fa5}
+  .tag.guide{background:#e6f7ec;color:#136c3f} .tag.site{background:#f3e8fd;color:#6a1ab5}
+  .ref .rd{font-size:.84rem;color:var(--muted);margin-bottom:6px}
+  .ref a{font-size:.82rem;font-weight:700;text-decoration:none}
+  .ref a:hover{text-decoration:underline}
+  .ref .url{font-size:.75rem;color:#8494a8;word-break:break-all;font-family:ui-monospace,monospace}
+
+  footer{text-align:center;color:var(--muted);font-size:.81rem;padding:26px 16px;border-top:1px solid var(--line)}
+  @media print{ .sidebar,.topbar{display:none} .layout{display:block} section{break-inside:avoid} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="t">🎓 <span>Préparation — Liste d'aptitude<br>Directeur d'école</span></div>
+  <a href="#situations">🚨 Situations d'urgence</a>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge">Liste d'aptitude · Directeur d'école · Mayotte</div>
+    <h1>Devenir <em>Directeur d'École</em><br>Guide complet de préparation</h1>
+    <p>Tout ce qu'il faut savoir : la loi Rilhac, les missions, les situations d'urgence à maîtriser,
+       et l'entretien devant le jury. Préparé pour M. Jacques Hassani Moustoifa.</p>
+    <div class="stats">
+      <div><b>9</b>sections</div>
+      <div><b>12</b>cas d'urgence</div>
+      <div><b>30</b>questions et cas</div>
+      <div><b>4</b>réflexes clés</div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>Sommaire</h3>
+    <nav id="nav">
+      <a href="#fonction"><span class="n">1</span> La fonction et les missions</a>
+      <a href="#rilhac"><span class="n">2</span> La loi Rilhac (2021)</a>
+      <a href="#essentiel"><span class="n">3</span> L'essentiel à connaître</a>
+      <a href="#methode"><span class="n">4</span> La méthode en 4 réflexes</a>
+      <a href="#situations"><span class="n">5</span> 🚨 Les 12 situations d'urgence</a>
+      <a href="#entretien"><span class="n">6</span> 🎤 L'entretien devant le jury</a>
+      <a href="#questions"><span class="n">7</span> Les questions du jury</a>
+      <a href="#plan"><span class="n">8</span> Mon plan de préparation</a>
+      <a href="#sources"><span class="n">9</span> 📖 Les sources officielles</a>
+    </nav>
+  </aside>
+
+  <main>
+
+  <!-- ══════════ 1. LA FONCTION ══════════ -->
+  <section id="fonction">
+    <div class="kicker">Section 1</div>
+    <h2>Le directeur d'école : ce que c'est vraiment</h2>
+
+    <p>Le directeur d'école est un <strong>professeur des écoles</strong> qui, en plus de sa classe
+      (ou avec une décharge), assure la <strong>direction</strong> de l'école. Ce n'est pas un chef
+      d'établissement comme le principal d'un collège : il n'a <strong>pas d'autorité
+      hiérarchique</strong> sur ses collègues enseignants.</p>
+
+    <div class="callout info">
+      <div class="ct">💡 La phrase à retenir</div>
+      <p>« Le directeur d'école est <strong>le premier parmi ses pairs</strong> : il anime, il organise,
+        il coordonne, il représente — mais il n'a pas de pouvoir hiérarchique sur les professeurs. »</p>
+    </div>
+
+    <h3><span class="ico">📋</span> Les 6 grandes missions du directeur</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="ct">1️⃣ Piloter</div>
+        <p>Élaborer et faire vivre le <strong>projet d'école</strong> : les objectifs, les actions, le suivi.
+          Animer les <strong>conseils des maîtres</strong> et le <strong>conseil d'école</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">2️⃣ Organiser</div>
+        <p>Répartir les classes et les services, gérer les <strong>emplois du temps</strong>, organiser les
+          remplacements au quotidien, coordonner les <strong>AESH</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">3️⃣ Sécuriser</div>
+        <p>Veiller à la <strong>sécurité des élèves et des adultes</strong>, écrire et faire appliquer le
+          <strong>PPMS</strong>, gérer les exercices d'évacuation et de confinement.</p>
+      </div>
+      <div class="card">
+        <div class="ct">4️⃣ Accueillir et communiquer</div>
+        <p>Relations avec les <strong>familles</strong>, gestion des tensions, réunions, informations.
+          Ouverture de l'école sur son quartier.</p>
+      </div>
+      <div class="card">
+        <div class="ct">5️⃣ Administrer</div>
+        <p><strong>Inscriptions</strong>, registre matricule, dossiers scolaires, statistiques,
+          <strong>remontées à l'IEN</strong>, suivi des accidents et des absences.</p>
+      </div>
+      <div class="card">
+        <div class="ct">6️⃣ Inclure</div>
+        <p>Suivi des <strong>PAP, PPRE, PPS, ULIS</strong> : faire en sorte que chaque élève à besoins
+          particuliers soit accueilli et accompagné.</p>
+      </div>
+    </div>
+
+    <h3><span class="ico">🤝</span> Avec qui le directeur travaille-t-il ?</h3>
+    <table>
+      <tr><th>Partenaire</th><th>Pourquoi</th></tr>
+      <tr><td><strong>L'IEN</strong> (Inspecteur de l'Éducation nationale)</td>
+          <td>C'est le supérieur hiérarchique de référence. <strong>On l'informe, on le saisit, on suit ses consignes.</strong></td></tr>
+      <tr><td><strong>Le DASEN</strong> (Directeur académique)</td>
+          <td>Au-dessus de l'IEN. Saisi pour les questions graves (sécurité, signalements, plaintes).</td></tr>
+      <tr><td><strong>La commune / la mairie</strong></td>
+          <td>Propriétaire des <strong>bâtiments</strong> et employeur des personnels d'entretien et de restauration. En cas de panne, c'est elle qu'on appelle.</td></tr>
+      <tr><td><strong>Les parents</strong> (élus au conseil d'école)</td>
+          <td>Représentants des familles, partenaires de l'école.</td></tr>
+      <tr><td><strong>La collectivité / les associations</strong></td>
+          <td>Activités périscolaires, PEDT, projets.</td></tr>
+    </table>
+
+    <div class="callout warn">
+      <div class="ct">⚠️ Le piège classique de l'entretien</div>
+      <p>Beaucoup de candidats répondent « je fais à la place de » ou « je règle moi-même ».
+        Faux ! Un directeur <strong>ne remplace pas la mairie, ne répare pas, n'enquête pas</strong>.
+        Il <strong>alerte</strong> le bon interlocuteur, il <strong>sécurise</strong>, il <strong>trace</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 2. LOI RILHAC ══════════ -->
+  <section id="rilhac">
+    <div class="kicker">Section 2 — Le texte le plus important</div>
+    <h2>⚖️ La loi Rilhac (21 décembre 2021)</h2>
+
+    <div class="ref">
+      <div class="rt">Loi n° 2021-1716 du 21 décembre 2021</div>
+      <div class="ref-meta">
+        <span class="tag loi">LOI</span>
+        <span class="tag bo">JORF</span>
+      </div>
+      <div class="rd">Loi créant la fonction de <strong>directrice ou directeur d'école</strong>.
+        C'est LE texte fondateur de la fonction telle qu'elle existe aujourd'hui.</div>
+      <div class="url">https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044542629</div>
+    </div>
+
+    <p>Avant cette loi, le directeur d'école avait des missions… mais <strong>aucun cadre juridique
+      clair</strong> pour les exercer. La loi Rilhac est venue <strong>donner un fondement légal</strong>
+      à son rôle et surtout <strong>l'outiller</strong>.</p>
+
+    <h3><span class="ico">🔑</span> Les 5 apports majeurs de la loi Rilhac</h3>
+
+    <h4>1. Une <em>autorité fonctionnelle</em> — pas hiérarchique</h4>
+    <p>Le directeur dispose d'une <strong>autorité fonctionnelle</strong> sur les personnels exerçant
+      dans l'école. Concrètement : il <strong>organise</strong> leur travail, il leur donne des
+      consignes de fonctionnement, il veille à la continuité du service.</p>
+    <div class="callout warn">
+      <div class="ct">⚠️ La nuance décisive (le jury adore la tester)</div>
+      <p><strong>Autorité fonctionnelle ≠ autorité hiérarchique.</strong> Le directeur n'évalue pas,
+        ne note pas, ne sanctionne pas un professeur. Pour un problème disciplinaire avec un
+        enseignant → <strong>il saisit l'IEN</strong>. Mais il organise, répartit, coordonne, rappelle
+        le cadre.</p>
+    </div>
+
+    <h4>2. La désignation d'un <em>adjoint suppléant</em></h4>
+    <p>Le directeur peut <strong>désigner un enseignant</strong> pour le suppléer en cas d'absence
+      (maladie, formation, décharge). Il doit l'<strong>annoncer en conseil des maîtres</strong>
+      en début d'année et <strong>informer l'IEN</strong>.</p>
+
+    <h4>3. La possibilité de <em>faire intervenir des personnes extérieures</em></h4>
+    <p>Le directeur peut solliciter l'intervention de personnes extérieures (associations, partenaires,
+      bénévoles) pour des actions éducatives — dans le cadre du projet d'école et en lien avec la commune.</p>
+
+    <h4>4. Le renforcement de la <em>protection</em> du directeur</h4>
+    <p>Le directeur d'école bénéficie d'une <strong>protection renforcée</strong> : il est protégé
+      dans l'exercice de ses fonctions, et l'État assure sa <strong>protection juridique</strong>
+      quand il est mis en cause pour des faits commis dans l'exercice de ses missions.</p>
+
+    <h4>5. L'accès à l'école et les personnes perturbatrices</h4>
+    <p>Le directeur peut <strong>restreindre ou interdire l'accès de l'école</strong> à une personne
+      dont le comportement perturbe gravement le fonctionnement — <strong>en informant l'IEN</strong>.
+      C'est l'outil juridique à sortir dans les cas de parents menaçants.</p>
+
+    <div class="callout ok">
+      <div class="ct">✅ La formule à retenir pour le jury</div>
+      <p>« <strong>La loi Rilhac a donné au directeur un cadre et des outils</strong> : une autorité
+        fonctionnelle pour organiser, la possibilité de désigner un suppléant, de faire intervenir des
+        partenaires extérieurs, et — très important — <strong>la possibilité de limiter l'accès à
+        l'école aux personnes qui la perturbent</strong>, toujours sous couvert de l'IEN. »</p>
+    </div>
+
+    <div class="callout info">
+      <div class="ct">📌 Attention aux textes d'application</div>
+      <p>La loi de 2021 a été complétée par des <strong>décrets et arrêtés d'application (2023-2025)</strong>
+        qui précisent les conditions concrètes. → Vérifie les numéros exacts sur Légifrance avant
+        l'entretien (je te les compléterai dès que tu m'envoies tes documents).</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 3. L'ESSENTIEL ══════════ -->
+  <section id="essentiel">
+    <div class="kicker">Section 3</div>
+    <h2>🔑 L'essentiel à connaître par cœur</h2>
+
+    <h3><span class="ico">📜</span> Les textes de référence</h3>
+    <table>
+      <tr><th>Texte</th><th>Ce qu'il dit</th></tr>
+      <tr><td><strong>Loi n° 2021-1716</strong> (21 déc. 2021 — loi Rilhac)</td>
+          <td>Crée la fonction de directeur d'école : autorité fonctionnelle, suppléant, protection, accès à l'école.</td></tr>
+      <tr><td><strong>Code de l'éducation</strong>, art. <strong>L411-1</strong></td>
+          <td>Le directeur est chargé de la direction de l'école (modifié par la loi Rilhac).</td></tr>
+      <tr><td><strong>Code de l'éducation</strong>, art. <strong>D411-1 à D411-9</strong></td>
+          <td>Fonctionnement de l'école : <strong>conseil d'école</strong>, conseil des maîtres, équipe éducative.</td></tr>
+      <tr><td><strong>Code de l'éducation</strong>, art. <strong>L111-1</strong></td>
+          <td>Le service public de l'éducation : principe de <strong>gratuité, neutralité, laïcité</strong>.</td></tr>
+      <tr><td><strong>Code de l'action sociale et des familles</strong>, art. <strong>L226-2-2</strong></td>
+          <td><strong>Obligation de signalement</strong> pour les enfants en danger — le directeur est concerné directement.</td></tr>
+      <tr><td><strong>Code pénal</strong>, art. <strong>40</strong> (CPP)</td>
+          <td>Tout fonctionnaire qui a connaissance d'un <strong>crime ou d'un délit</strong> doit le signaler au procureur.</td></tr>
+      <tr><td><strong>Charte de la laïcité</strong> à l'école</td>
+          <td>15 articles, à afficher dans l'école. Le directeur en est le garant.</td></tr>
+      <tr><td><strong>PPMS</strong> (Plan Particulier de Mise en Sécurité)</td>
+          <td>Le document de sécurité de l'école — obligatoire. Le directeur le rédige et le fait vivre.</td></tr>
+    </table>
+
+    <h3><span class="ico">🎯</span> Les notions que le jury aime vérifier</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="ct">🏛️ La laïcité</div>
+        <p>Le directeur est le <strong>garant de la laïcité</strong>. Il répond aux manquements (symboles,
+          propos, refus de mixité) par le <strong>dialogue</strong> puis, si besoin, par
+          <strong>l'information de l'IEN</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">🔒 Le secret professionnel</div>
+        <p>Le directeur ne raconte pas ce qu'il apprend sur une famille. <strong>Sauf
+          pour protéger un enfant en danger</strong> → là, il a même l'<em>obligation</em> de signaler.</p>
+      </div>
+      <div class="card">
+        <div class="ct">⚖️ La protection de l'enfance</div>
+        <p>Un enfant maltraité = <strong>signalement</strong> (au DASEN et/ou au CRIP). Le directeur ne
+          décide pas seul, mais <strong>ne peut pas ne rien faire</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">🏫 Le conseil d'école</div>
+        <p>Il se réunit au moins <strong>3 fois par an</strong>. Il est présidé par le directeur, et
+          <strong>adopte le projet d'école</strong> et le règlement intérieur.</p>
+      </div>
+      <div class="card">
+        <div class="ct">👥 Le conseil des maîtres</div>
+        <p>Composé des <strong>enseignants</strong> de l'école, il se réunit au moins
+          <strong>une fois par trimestre</strong>. Il est présidé par le directeur.</p>
+      </div>
+      <div class="card">
+        <div class="ct">📅 Le projet d'école</div>
+        <p><strong>3 à 5 ans</strong>. Écrit avec l'équipe, piloté par le directeur, évalué
+          régulièrement. C'est la feuille de route de l'école.</p>
+      </div>
+    </div>
+
+    <div class="callout danger">
+      <div class="ct">🚫 Les 3 erreurs qui font échouer un candidat</div>
+      <p><strong>1.</strong> Vouloir « tout régler seul » (l'hyper-directeur qui court-circuite l'IEN).<br>
+        <strong>2.</strong> Minimiser une situation grave (« ce n'est rien, ça va se tasser »).<br>
+        <strong>3.</strong> Oublier la <strong>trace écrite</strong> — en entretien comme dans le métier,
+          <strong>ce qui n'est pas écrit n'existe pas</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 4. LA MÉTHODE ══════════ -->
+  <section id="methode">
+    <div class="kicker">Section 4 — À mémoriser absolument</div>
+    <h2>🧭 La méthode en 4 réflexes</h2>
+
+    <p>Quelle que soit la situation qu'on te présente à l'entretien (ou que tu vivras dans l'école),
+      <strong>réponds toujours avec ces 4 étapes dans cet ordre</strong>. C'est ce que le jury attend.</p>
+
+    <div class="methode">
+      <div class="etape">
+        <div class="num">1</div>
+        <b>SÉCURISER</b>
+        <span>Les <strong>personnes</strong> d'abord. Élèves, adultes. On met à l'abri, on éloigne le danger, on soigne.</span>
+      </div>
+      <div class="etape">
+        <div class="num">2</div>
+        <b>ALERTER</b>
+        <span>Le <strong>bon interlocuteur</strong> : 15 / 17 / 18 si urgence vitale, puis l'<strong>IEN</strong>, la <strong>mairie</strong>, le <strong>DASEN</strong>.</span>
+      </div>
+      <div class="etape">
+        <div class="num">3</div>
+        <b>TRACER</b>
+        <span>Un <strong>écrit</strong> : rapport, main courante, registre. Date, heure, faits, témoins, mots exacts.</span>
+      </div>
+      <div class="etape">
+        <div class="num">4</div>
+        <b>PROTÉGER</b>
+        <span>Les <strong>droits de chacun</strong> : protection juridique de l'État, présomption d'innocence, confidentialité.</span>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <div class="ct">✅ La phrase qui fait la différence à l'oral</div>
+      <p>« Dans une situation de crise, je retiens quatre temps : <strong>je sécurise, j'alerte, je trace
+        et je protège</strong>. Et je ne reste jamais seul face à une situation grave : j'informe
+        immédiatement mon inspecteur. »</p>
+    </div>
+
+    <div class="callout warn">
+      <div class="ct">⚠️ Le réflexe numéro 1 du directeur</div>
+      <p><strong>NE JAMAIS RESTER SEUL.</strong> Dès qu'une situation dépasse le cadre ordinaire
+        (violence, danger pour un enfant, menace), le directeur <strong>informe sa hiérarchie</strong>.
+        Ce n'est pas un aveu de faiblesse : c'est <strong>exactement</strong> ce qu'on attend de lui.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 5. SITUATIONS D'URGENCE ══════════ -->
+  <section id="situations">
+    <div class="kicker">Section 5 — Le cœur de ta préparation</div>
+    <h2>🚨 Les 12 situations d'urgence</h2>
+    <p>Voici les cas que le jury peut te présenter — et que tu rencontreras vraiment.
+      Pour chacun : <strong>les réflexes immédiats</strong>, <strong>la suite</strong>,
+      <strong>les erreurs à éviter</strong> et <strong>ce que le jury veut entendre</strong>.</p>
+
+    <!-- ─── CAS 1 : COUPURE D'ÉLECTRICITÉ ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🔌</span>
+        <div><b>Cas n° 1 — Coupure d'électricité</b>
+          <small>« L'électricité est coupée dans l'école. Que faites-vous ? »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Rassurer les élèves</strong> et garder le calme : la panne n'est pas un danger en soi.</li>
+            <li><strong>Garder les élèves en classe</strong> (ou dans un lieu sûr et éclairé naturellement) —
+              on n'évacue pas dans le noir, on ne laisse personne circuler dans les couloirs sombres.</li>
+            <li>Vérifier qu'<strong>aucun élève n'est bloqué</strong> (locaux annexes, sanitaires).</li>
+            <li>Si c'est une <strong>panne du quartier</strong> : vérifier auprès de la mairie. Si c'est une
+              <strong>panne de l'école seule</strong> : disjoncteur, puis <strong>appeler la mairie</strong>
+              (c'est elle qui gère le bâtiment).</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Informer l'IEN</strong> — surtout si la coupure se prolonge (chauffage, éclairage,
+              restauration, sécurité).</li>
+            <li><strong>Décider avec la hiérarchie</strong> du maintien des élèves ou d'une sortie anticipée.
+              Ce n'est jamais une décision solitaire et improvisée : on informe les familles
+              <strong>par écrit</strong> (SMS, affichage, cahier).</li>
+            <li><strong>Tracer</strong> dans le registre de sécurité : heure, durée, interlocuteurs appelés,
+              décisions prises.</li>
+            <li>Si la panne touche la <strong>restauration</strong> ou le <strong>chauffage</strong> :
+              informer la commune <strong>immédiatement</strong> et évaluer avec elle le maintien des élèves.</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Évacuer aveuglément dans le noir. Réparer soi-même. Laisser les élèves seuls pour aller voir.
+            Garder l'information pour soi sans prévenir l'IEN.</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « La sécurité des élèves d'abord, puis j'alerte la
+          <strong>mairie</strong> — propriétaire du bâtiment — et j'<strong>informe mon IEN</strong>.
+          Je trace tout et je communique aux familles. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 2 : PARENT VIOLENT ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🚨</span>
+        <div><b>Cas n° 2 — Un parent vient frapper un enseignant</b>
+          <small>« Un parent arrive en colère et agresse physiquement un enseignant. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement (dans l'ordre)</div>
+          <ol>
+            <li><strong>Faire cesser l'agression</strong> : intervenir avec d'autres adultes pour séparer.
+              <em>On protège la personne avant tout.</em></li>
+            <li><strong>Mettre les élèves à l'abri</strong> : les faire sortir de la pièce et les confier
+              à un collègue dans une autre salle. <strong>Un élève ne doit jamais assister à ça.</strong></li>
+            <li><strong>Appeler le 17</strong> (police ou gendarmerie) si l'agression est constatée.
+              Le 15 si l'enseignant est blessé.</li>
+            <li><strong>Rassurer et accompagner l'enseignant</strong> : ne pas le laisser seul, l'aider à
+              souffler, noter les blessures.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite — et c'est là que tout se joue</div>
+          <ul>
+            <li><strong>Informer IMMÉDIATEMENT l'IEN</strong> (appel téléphonique dans l'heure), puis le
+              DASEN par écrit. <strong>C'est une situation qu'on ne gère jamais seul.</strong></li>
+            <li><strong>Rédiger un rapport écrit dans la journée</strong> : date, heure, lieu, faits
+              précis, personnes présentes, témoins, blessures, ce qui a été fait. <strong>Faire signer
+              les témoins.</strong></li>
+            <li><strong>Encourager l'enseignant à porter plainte</strong> (dépôt de plainte à la police).
+              L'État se porte partie civile aux côtés de l'agent.</li>
+            <li><strong>Déclarer l'accident de service</strong> : c'est la procédure qui déclenche la
+              protection de l'agent par l'État.</li>
+            <li><strong>Utiliser la loi Rilhac</strong> : tu peux <strong>restreindre l'accès de cette
+              personne à l'école</strong> (informer l'IEN). Ça se formalise par écrit.</li>
+            <li><strong>Informer les familles</strong> avec sobriété (sans détails personnels) si la
+              situation l'exige.</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Chercher à calmer seul l'agresseur. Minimiser ou « arranger ça entre adultes ». Ne pas
+            appeler la police par peur du scandale. Laisser l'enseignant se débrouiller seul.
+            Raconter les détails à tout le monde.</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je protège la personne, je mets les élèves à l'abri,
+          j'appelle le 17, j'<strong>informe mon IEN immédiatement</strong>, je fais un rapport écrit le
+          jour même, j'accompagne le collègue pour sa plainte et sa déclaration d'accident de service,
+          et j'applique la <strong>loi Rilhac</strong> pour limiter l'accès de l'agresseur à l'école. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 3 : ACCUSATION DE VIOLENCE SUR UN ENFANT ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">⚠️</span>
+        <div><b>Cas n° 3 — Un parent accuse un enseignant d'avoir frappé son enfant</b>
+          <small>« Un parent vient se plaindre : son enfant aurait été tapé par un enseignant. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement — l'attitude d'abord</div>
+          <ol>
+            <li><strong>Écouter le parent calmement</strong>, dans un endroit isolé (pas dans le couloir,
+              pas devant les élèves). <strong>Ne pas couper la parole.</strong> Le parent a besoin d'être
+              entendu : ça désamorce énormément.</li>
+            <li><strong>Ne rien nier et ne rien confirmer.</strong> Formule : « Je prends votre
+              signalement très au sérieux. Je vais le transmettre immédiatement à mon inspecteur. »</li>
+            <li><strong>NOTER PAR ÉCRIT</strong> immédiatement après l'entretien : les mots exacts du
+              parent, la date, l'heure, qui était présent, ce qui est reproché précisément.</li>
+            <li><strong>NE JAMAIS confronter l'enseignant et le parent ensemble.</strong></li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite — la règle d'or</div>
+          <ul>
+            <li><strong>Informer l'IEN sans délai</strong> (le jour même). <strong>Le directeur ne mène
+              pas l'enquête</strong> : c'est l'autorité académique qui décide de la suite
+              (convocation, enquête administrative, protection de l'enseignant, etc.).</li>
+            <li><strong>Si les faits paraissent graves ou vraisemblables</strong> : le circuit est
+              <strong>DASEN + signalement</strong> (et 119 / CRIP pour la protection de l'enfance).
+              Un enfant qui dit avoir été frappé <strong>ne doit jamais être renvoyé chez lui sans
+              suite</strong>.</li>
+            <li><strong>Protéger les deux côtés</strong> :
+              <ul>
+                <li>l'<strong>élève</strong> (écoute, protection, suivi) ;</li>
+                <li>l'<strong>enseignant</strong> (présomption d'innocence, il continue d'être protégé
+                  par l'État, il a droit à la protection juridique).</li>
+              </ul></li>
+            <li><strong>Confidentialité absolue</strong> : on ne parle pas de l'affaire aux autres
+              parents, ni aux autres enseignants au-delà du nécessaire, ni aux élèves.</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Mener ton propre interrogatoire de l'enseignant ou de l'élève.
+            Dire au parent « cet enseignant est connu pour ça ». Promettre une sanction.
+            Dire « je suis sûr que ce n'est pas vrai » (tu ne le sais pas) ou « c'est sûrement vrai »
+            (tu ne le sais pas non plus). Renvoyer le parent sans trace.</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « J'écoute, je ne juge pas, <strong>je ne mène pas
+          l'enquête</strong> : je <strong>trace par écrit</strong> et je <strong>transmets immédiatement
+          à l'IEN</strong>, qui déclenchera la procédure. Si un enfant est en danger, il y a
+          <strong>obligation de signalement</strong>. Et je protège la réputation et les droits de
+          l'enseignant jusqu'à ce que la vérité soit établie. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 4 : ÉLÈVE BLESSÉ ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🤕</span>
+        <div><b>Cas n° 4 — Un élève se blesse dans la cour</b>
+          <small>« Un élève tombe et se casse le bras pendant la récréation. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Ne pas déplacer l'élève</strong> s'il a mal à la tête, au dos ou à un membre :
+              on le rassure sur place. On <strong>appelle le 15</strong> si nécessaire.</li>
+            <li><strong>Soigner</strong> avec la trousse de secours si ce qui est bénin.</li>
+            <li><strong>Prévenir la famille immédiatement</strong> (le directeur ou un enseignant désigné).</li>
+            <li><strong>Surveiller les autres élèves</strong> : l'accident a pu être causé par un jeu
+              violent ou du harcèlement → à vérifier, sans procès.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Déclaration d'accident scolaire</strong> (formulaire d'accident scolaire) —
+              <strong>c'est obligatoire et à faire dans les 48 heures</strong> pour la couverture
+              assurance de l'élève. Tu remplis, tu fais signer, tu transmets.</li>
+            <li><strong>Tracer</strong> dans le registre : heure, lieu, circonstances, témoins, soins
+              donnés.</li>
+            <li>Si l'accident vient d'un <strong>défaut d'entretien</strong> (trou dans la cour, portail
+              cassé) : <strong>informer la mairie par écrit</strong> et garder une copie. C'est
+              important pour la responsabilité.</li>
+            <li>Consulter l'<strong>infirmier scolaire</strong> ou le médecin scolaire si besoin.</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je sécurise et je soigne, je préviens la famille
+          immédiatement, je remplis la <strong>déclaration d'accident scolaire</strong> dans les 48 h,
+          je trace, et si le bâtiment est en cause j'écris à la <strong>mairie</strong>. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 5 : ENFANT EN DANGER ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🛡️</span>
+        <div><b>Cas n° 5 — Un enfant est en danger chez lui</b>
+          <small>« Un élève arrive avec des bleus, il est très renfermé. Vous pensez à des violences à la maison. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Accueillir l'enfant</strong> sans l'interroger : pas de questions directes
+              (« qui t'a fait ça ? »). On l'écoute s'il parle, on note ses mots exacts.</li>
+            <li><strong>Observer et noter</strong> objectivement : ce que tu vois, ce que tu entends,
+              la date. <strong>Pas d'interprétation.</strong></li>
+            <li><strong>Tracer par écrit</strong> : date, heure, constat, propos tenus, personnes
+              présentes.</li>
+            <li>Ne <strong>jamais</strong> prévenir la famille toi-même dans ce cas : tu pourrais mettre
+              l'enfant en danger.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite — c'est une obligation, pas un choix</div>
+          <ul>
+            <li><strong>Signaler</strong> : le directeur est soumis à une <strong>obligation de
+              signalement</strong> (art. L226-2-2 du CASF). En pratique :
+              <ul>
+                <li><strong>Fiche de signalement à l'IEN/DASEN</strong> ;</li>
+                <li>et/ou <strong>saisine du CRIP</strong> (Cellule de recueil des informations
+                  préoccupantes) ;</li>
+                <li>en cas d'urgence vitale : <strong>119</strong> (Enfance en Danger) ou
+                  <strong>avec les 15/17</strong>.</li>
+              </ul></li>
+            <li><strong>Ne jamais décider seul de l'ampleur</strong> : tu signales les faits, ce sont
+              les autorités (médecin scolaire, CRIP, procureur) qui évaluent.</li>
+            <li><strong>Le secret professionnel ne t'arrête pas ici</strong> : au contraire, le signalement
+              est <strong>autorisé et obligatoire</strong> pour protéger l'enfant.</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Interroger l'enfant plusieurs fois. Confronter la famille. Garder le silence par peur du
+            scandale. Attendre « pour voir si ça se reproduit ».</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je peux dire clairement : <strong>l'enfant est en
+          danger, je signale</strong>. C'est une obligation légale, et le secret professionnel ne
+          s'applique pas contre l'intérêt de l'enfant. Je fais un signalement écrit à l'IEN, et je
+          saisis le CRIP. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 6 : ENSEIGNANT ABSENT ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">👨‍🏫</span>
+        <div><b>Cas n° 6 — Un enseignant est absent (non remplacé)</b>
+          <small>« Un professeur est absent ce matin, personne ne le remplace. Il y a 25 élèves devant la porte. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Ne jamais laisser les élèves dans le couloir sans surveillance.</strong>
+              On les regroupe dans un espace surveillé (préau, bibliothèque, ou répartis dans les autres
+              classes).</li>
+            <li><strong>Organiser la journée</strong> avec l'équipe : <strong>répartir</strong> les élèves
+              dans les classes ou <strong>prendre le groupe</strong> (le directeur ou un collègue
+              disponible).</li>
+            <li><strong>Informer l'IEN</strong> de l'absence non remplacée : c'est un
+              <strong>dysfonctionnement de service</strong>.</li>
+            <li><strong>Informer les familles</strong> (SMS, affichage) si la perturbation est importante.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li>Rappeler la <strong>règle de sécurité</strong> : on ne laisse jamais des élèves sans
+              surveillance.</li>
+            <li><strong>Tracer</strong> : heure de l'absence, ce qui a été mis en place, qui a été prévenu.</li>
+            <li>Faire un <strong>point sur l'organisation</strong> en conseil des maîtres si les
+              absences se répètent.</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « D'abord la sécurité : je ne laisse jamais des élèves
+          sans surveillance. Ensuite j'organise, j'informe l'IEN, et je trace. Je répartis les élèves,
+          je prends le groupe, je communique aux familles. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 7 : INTRUSION ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🚧</span>
+        <div><b>Cas n° 7 — Une intrusion dans l'école</b>
+          <small>« Une personne inconnue est entrée dans la cour et rôde près des bâtiments. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Appliquer le PPMS « intrusion »</strong> : c'est le protocole écrit de l'école.
+              Concrètement : <strong>faire rentrer les élèves</strong>, fermer les accès, si nécessaire
+              <strong>confinement</strong> (élèves assis, sous les tables, dans le silence, portes
+              verrouillées).</li>
+            <li><strong>Prévenir les forces de l'ordre (17)</strong> si la personne est menaçante ou si tu
+              ne maîtrises pas la situation.</li>
+            <li><strong>Faire l'alerte en interne</strong> : signal convenu (coup de sifflet, message
+              codé, sonnerie spécifique).</li>
+            <li><strong>Rassurer les élèves</strong> : le calme de l'adulte est la première sécurité.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Informer l'IEN</strong> dès que la situation est maîtrisée, puis le DASEN si les
+              faits sont graves.</li>
+            <li><strong>Tracer</strong> : description de la personne, heure, réactions, décisions prises.</li>
+            <li><strong>Débriefing</strong> avec l'équipe : ce qui a bien marché, ce qu'il faut améliorer
+              dans le PPMS.</li>
+            <li>Éventuellement <strong>exercice</strong> d'entraînement régulier (une fois par an minimum).</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Aller « voir » seul et laisser les élèves sans consigne. Sortir les élèves de l'école.
+            Intervenir physiquement contre une personne armée ou dangereuse.</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « J'applique le <strong>PPMS intrusion</strong>,
+          je mets les élèves en sécurité, j'alerte le <strong>17</strong> si nécessaire, j'informe l'IEN,
+          je trace et je fais un débriefing. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 8 : ENFANT DISPARU ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🔍</span>
+        <div><b>Cas n° 8 — Un élève a disparu / a fugué</b>
+          <small>« À la sortie, on s'aperçoit qu'un élève de CP n'est plus dans l'école. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Faire rechercher dans l'école immédiatement</strong> : toutes les salles, les
+              sanitaires, la cour, les recoins. On organise la recherche en 2 minutes.</li>
+            <li><strong>Appeler la famille</strong> pour savoir si quelqu'un est venu le chercher.</li>
+            <li><strong>Si l'enfant n'est pas retrouvé dans l'école</strong> → <strong>appeler le 17
+              immédiatement</strong>. On ne cherche pas à l'extérieur seul.</li>
+            <li><strong>Ne pas laisser les autres élèves sans surveillance</strong> : d'autres adultes
+              prennent le relais.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Informer immédiatement l'IEN</strong>.</li>
+            <li><strong>Tracer</strong> : heure du constat, heure de l'appel police, heure du retour de
+              l'enfant.</li>
+            <li>Si l'enfant a été retrouvé : <strong>accueillir l'enfant</strong> calmement, prévenir la
+              famille, comprendre ce qui s'est passé (sans dramatiser ni minimiser).</li>
+            <li><strong>Revoir l'organisation des sorties</strong> : comptage, portail, surveillance,
+              registre des entrées/sorties.</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je cherche immédiatement dans l'école, j'appelle la
+          famille, et <strong>si je ne le retrouve pas en quelques minutes, j'appelle le 17</strong>.
+          J'informe l'IEN, je trace, et je revois l'organisation. <strong>On ne fait pas de recherche
+          à l'extérieur à la légère.</strong> »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 9 : HARCÈLEMENT ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">💔</span>
+        <div><b>Cas n° 9 — Le harcèlement entre élèves</b>
+          <small>« Une mère vous dit que son fils est harcelé par un groupe d'élèves, moqueries et coups. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Écouter la mère</strong>, noter les faits, les dates, les élèves concernés, les
+              témoins éventuels.</li>
+            <li><strong>Protéger l'élève harcelé</strong> : mise en sécurité immédiate, point de
+              surveillance, on évite de le laisser seul avec le groupe.</li>
+            <li><strong>Ne pas confronter l'élève et le groupe</strong> devant tout le monde.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite — la procédure « harcèlement »</div>
+          <ul>
+            <li>Recevoir les élèves <strong>séparément</strong> pour comprendre les faits.
+              <em>Ce n'est pas une enquête policière : on recueille la parole, puis on transmet.</em></li>
+            <li><strong>Informer l'IEN</strong>. Pour les faits graves, la procédure prévoit une
+              <strong>équipe de suivi</strong> et, si besoin, une <strong>saisine du Rectorat</strong>.</li>
+            <li><strong>Prévenir les familles</strong> de tous les élèves concernés (dans le respect
+              de la confidentialité de chacun).</li>
+            <li>Mettre en place des <strong>mesures de protection</strong> et de <strong>médiation</strong>,
+              éventuellement des <strong>sanctions</strong> (selon le règlement, en conseil de discipline
+              ? hors 1er degré : plutôt mesures éducatives + signalement).</li>
+            <li><strong>Tracer tous les éléments</strong> : c'est essentiel si la situation s'aggrave.</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « La priorité est <strong>la protection de la
+          victime</strong>. J'écoute, je trace, j'informe l'IEN, je mobilise l'équipe éducative,
+          je reçois les familles séparément, et je mets en place des mesures concrètes — pas des
+          promesses. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 10 : CONFLIT ENSEIGNANTS ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">⚡</span>
+        <div><b>Cas n° 10 — Un conflit entre deux enseignants</b>
+          <small>« Deux collègues se disputent violemment en salle des maîtres. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Mettre fin à l'altercation</strong> : séparer, faire baisser la tension, dans un
+              lieu privé.</li>
+            <li><strong>Écouter chacun séparément</strong> : les faits, pas les reproches réciproques.</li>
+            <li><strong>Rappeler le cadre</strong> : l'école est un lieu serein — les conflits ne se
+              règlent pas devant les élèves.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Tenter la médiation</strong> : un temps à trois, des règles simples (parler à la
+              première personne, écouter, s'engager sur des points concrets).</li>
+            <li>Si le conflit <strong>persiste ou s'aggrave</strong> → <strong>saisir l'IEN</strong>.
+              Tu n'as pas de pouvoir hiérarchique : c'est l'IEN qui arbitre.</li>
+            <li><strong>Tracer</strong> : dates, faits, démarches de médiation tentées.</li>
+          </ul>
+        </div>
+        <div class="bloc">
+          <div class="bt or">🚫 À ne pas faire</div>
+          <p>Prendre parti publiquement. Sanctionner un enseignant (tu ne peux pas). Laisser pourrir.
+            Raconter aux autres.</p>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je sépare, j'écoute, je médiatise. Si ça ne suffit
+          pas, je <strong>saisis l'IEN</strong>, car je n'ai pas d'autorité hiérarchique sur des
+          collègues. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 11 : ÉLÈVE HANDICAP SANS AESH ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">♿</span>
+        <div><b>Cas n° 11 — Un élève en situation de handicap arrive sans AESH</b>
+          <small>« Un élève notifié MDPH arrive à la rentrée : son AESH n'est pas encore là. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Accueillir l'élève normalement</strong> : il est inscrit dans l'école, il a sa
+              place. <strong>L'accueil ne se négocie pas.</strong></li>
+            <li><strong>Aménager au mieux avec l'équipe</strong> : l'enseignant adapte, l'école
+              s'organise (soutien d'un camarade, organisation de classe).</li>
+            <li><strong>Informer l'IEN et le service compétent</strong> : absence d'AESH = une
+              notification de la MDPH non appliquée. <strong>Tu le signales, tu ne le subis pas.</strong></li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Relancer par écrit</strong> (IEN, DSDEN, MDPH, AESH référent).</li>
+            <li><strong>Informer la famille</strong> de la démarche faite (et pas seulement des
+              difficultés).</li>
+            <li><strong>Tracer</strong> : date de la notification, démarches faites, réponses obtenues.</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « L'élève est accueilli sans condition. J'aménage avec
+          l'équipe et je <strong>signale l'absence d'AESH</strong> à l'IEN. Un directeur ne dit pas
+          "pas d'AESH, pas d'accueil" : c'est contraire au droit. »
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CAS 12 : PARENT MENAÇANT ─── -->
+    <div class="cas">
+      <div class="cas-head">
+        <span class="e">🗣️</span>
+        <div><b>Cas n° 12 — Un parent menaçant refuse de quitter l'école</b>
+          <small>« Un parent crie, insulte et refuse de partir devant les élèves. »</small></div>
+      </div>
+      <div class="cas-body">
+        <div class="bloc">
+          <div class="bt rouge">⚡ Immédiatement</div>
+          <ol>
+            <li><strong>Mettre les élèves à l'abri</strong> : les faire sortir, fermer la salle.</li>
+            <li><strong>Garder son calme</strong>, ne pas répondre aux insultes, ne pas entrer dans
+              l'escalade. <strong>Parler bas, lentement.</strong></li>
+            <li><strong>Appeler du renfort</strong> (collègue, direction) — <strong>ne jamais rester
+              seul</strong> avec une personne menaçante.</li>
+            <li><strong>Appeler le 17</strong> si la personne refuse de partir ou menace.</li>
+          </ol>
+        </div>
+        <div class="bloc">
+          <div class="bt bleu">📋 Ensuite</div>
+          <ul>
+            <li><strong>Informer l'IEN immédiatement</strong>.</li>
+            <li><strong>Utiliser la loi Rilhac</strong> : <strong>restreindre ou interdire l'accès</strong>
+              de cette personne à l'école (par écrit, informe l'IEN). Les modalités de communication
+              avec elle seront revues.</li>
+            <li><strong>Tracer</strong> : propos exacts, heure, témoins. Faire signer les témoins.</li>
+            <li>Accompagner les personnes ciblées (protection, information de la protection
+              juridique si nécessaire).</li>
+          </ul>
+        </div>
+        <div class="jury">
+          <b>💬 Ce que le jury veut entendre :</b> « Je protège les élèves et les adultes, je reste
+          calme, j'appelle le 17 si nécessaire, j'informe l'IEN et j'applique la <strong>loi Rilhac</strong>
+          pour limiter l'accès de cette personne à l'école. »
+        </div>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="ct">🎯 LE FIL CONDUCTEUR DE TOUS CES CAS</div>
+      <p>Regarde bien : dans <strong>les 12 cas</strong>, tu retrouves toujours la même structure :</p>
+      <ul>
+        <li><strong>Sécuriser</strong> les personnes concernées (élèves d'abord, adultes ensuite) ;</li>
+        <li><strong>Alerter</strong> : secours (15/17/18) si urgence, puis <strong>IEN</strong>,
+          la <strong>mairie</strong> pour le bâtiment, le <strong>DASEN</strong> pour le grave ;</li>
+        <li><strong>Tracer</strong> par écrit — <em>« ce qui n'est pas écrit n'existe pas »</em> ;</li>
+        <li><strong>Protéger</strong> les droits de chacun (protection juridique, présomption d'innocence,
+          confidentialité).</li>
+      </ul>
+      <p><strong>Si tu retiens cette structure, tu peux répondre à n'importe quelle question</strong>,
+        même sur une situation que tu n'as jamais rencontrée.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 6. L'ENTRETIEN ══════════ -->
+  <section id="entretien">
+    <div class="kicker">Section 6</div>
+    <h2>🎤 L'entretien devant le jury</h2>
+
+    <p>Pour être inscrit sur la <strong>liste d'aptitude</strong>, tu passes un entretien devant un
+      jury. Ce n'est pas un examen de connaissances pures : <strong>on évalue ta posture, ta capacité
+      à analyser une situation et ton projet</strong>.</p>
+
+    <h3><span class="ico">👥</span> Qui te reçoit ?</h3>
+    <ul>
+      <li>L'<strong>IEN</strong> de ta circonscription (ou un IEN)</li>
+      <li>Un <strong>inspecteur</strong> ou un <strong>conseiller pédagogique</strong></li>
+      <li>Un <strong>directeur d'école expérimenté</strong></li>
+      <li>Parfois un représentant du <strong>DASEN</strong></li>
+    </ul>
+
+    <h3><span class="ico">⏱️</span> Comment ça se passe</h3>
+    <table>
+      <tr><th>Étape</th><th>Durée</th><th>Contenu</th></tr>
+      <tr><td><strong>Exposé</strong></td><td>~10 min</td>
+          <td>Tu présentes ton parcours et ta <strong>motivation</strong> pour la direction</td></tr>
+      <tr><td><strong>Questions</strong></td><td>~20 min</td>
+          <td>Connaissances, situations professionnelles, ton projet d'école</td></tr>
+      <tr><td><strong>Échange</strong></td><td>~5 min</td>
+          <td>Questions du candidat, précisions</td></tr>
+    </table>
+
+    <h3><span class="ico">🎯</span> Ce que le jury cherche à voir</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="ct">✅ La maturité</div>
+        <p>Tu sais que tu ne régleras pas tout. Tu connais <strong>tes limites</strong> et tu sais
+          <strong>à qui t'adresser</strong> quand ça dépasse.</p>
+      </div>
+      <div class="card">
+        <div class="ct">✅ La solidité réglementaire</div>
+        <p>Tu connais la <strong>loi Rilhac</strong>, le <strong>PPMS</strong>, le
+          <strong>conseil d'école</strong>, l'<strong>obligation de signalement</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="ct">✅ Le sens du collectif</div>
+        <p>Tu ne seras pas « le chef » : tu seras <strong>celui qui fait travailler ensemble</strong>.
+          Tu parles équipe, pas autorité.</p>
+      </div>
+      <div class="card">
+        <div class="ct">✅ La rigueur</div>
+        <p>Tu parles d'<strong>écrit</strong>, de <strong>traces</strong>, d'<strong>archives</strong>,
+          de <strong>continuité</strong>.</p>
+      </div>
+    </div>
+
+    <div class="callout danger">
+      <div class="ct">🚫 Les 6 phrases à ne JAMAIS prononcer</div>
+      <ul>
+        <li>« Je veux être directeur pour avoir moins de classe. »
+          <em>(montre que tu cherches un confort, pas une fonction)</em></li>
+        <li>« Je vais remettre de l'ordre dans cette école. »
+          <em>(tu arrives déjà en sauveur)</em></li>
+        <li>« Moi, avec les parents, je suis très ferme. »
+          <em>(le jury cherche du dialogue, pas de la fermeté de principe)</em></li>
+        <li>« Ça ne me fait pas peur, je gère tout seul. »
+          <em>(le directeur qui ne remonte pas l'info est le pire des risques)</em></li>
+        <li>« Je n'aime pas la paperasse, mais bon… »
+          <em>(l'administratif est 40 % du métier)</em></li>
+        <li>« Je ne sais pas trop, on verra sur le terrain. »
+          <em>(manque de préparation visible)</em></li>
+      </ul>
+    </div>
+
+    <h3><span class="ico">🗣️</span> Ta présentation (à préparer par écrit, ~2 pages)</h3>
+    <ol>
+      <li><strong>Qui tu es</strong> : ton parcours, ton école actuelle, tes classes (SEGPA, allophones…).</li>
+      <li><strong>Pourquoi la direction</strong> : un déclic concret (une situation vécue, un projet,
+        un besoin observé).</li>
+      <li><strong>Ce que tu apporterais</strong> : ton projet, ton point fort (ton expérience
+        d'enseignant en REP+ à Mayotte, ta maîtrise des publics à besoins particuliers).</li>
+      <li><strong>Comment tu travaillerais</strong> : <em>avec</em> l'équipe, <em>en lien</em> avec
+        l'IEN, <em>en lien</em> avec les familles.</li>
+      <li><strong>Ce que tu sais de la fonction</strong> : la loi Rilhac, les obligations, mais aussi
+        le poids du travail.</li>
+    </ol>
+  </section>
+
+  <!-- ══════════ 7. LES QUESTIONS ══════════ -->
+  <section id="questions">
+    <div class="kicker">Section 7</div>
+    <h2>❓ Les 25 questions du jury (et les bonnes réponses)</h2>
+
+    <h3><span class="ico">💬</span> A. Questions de motivation</h3>
+
+    <h4>1. Pourquoi vouloir être directeur d'école ?</h4>
+    <p>Évite « pour progresser » ou « pour changer ». Parle d'un <strong>déclencheur concret</strong> :
+      « Dans mon école, j'ai vu que certains sujets (relation familles, suivi des AESH, projet d'école)
+      n'avançaient que si quelqu'un portait le projet. Je veux être celui qui porte. »</p>
+
+    <h4>2. Qu'est-ce qu'un directeur d'école ? (pas un principal !)</h4>
+    <p>« Un professeur des écoles chargé de la direction de l'école. Il a une <strong>autorité
+      fonctionnelle</strong> — il organise, coordonne, anime — mais pas d'<strong>autorité
+      hiérarchique</strong> sur ses collègues enseignants. Il est le garant du bon fonctionnement,
+      de la sécurité et des relations avec les familles. »</p>
+
+    <h4>3. Quelle est la première qualité d'un directeur ?</h4>
+    <p>« La <strong>fiabilité</strong> : faire ce qu'on annonce, tenir les délais, ne rien laisser
+      sans réponse. Et la <strong>capacité à alerter</strong> quand une situation dépasse son champ. »</p>
+
+    <h4>4. Êtes-vous prêt à travailler seul, souvent tard, sans reconnaissance ?</h4>
+    <p>Réponds honnêtement. « Oui, je sais que ce poste implique de l'investissement personnel.
+      Mon expérience en SEGPA et en REP+ m'a appris que le travail invisible fait partie du métier. »</p>
+
+    <h3><span class="ico">📜</span> B. Questions réglementaires</h3>
+
+    <h4>5. Que change la loi Rilhac ?</h4>
+    <p>« Elle a <strong>créé la fonction de directeur d'école</strong> en lui donnant un cadre et des
+      outils : une <strong>autorité fonctionnelle</strong> sur les personnels, la possibilité de
+      <strong>désigner un suppléant</strong>, de <strong>faire intervenir des partenaires extérieurs</strong>,
+      une <strong>protection juridique renforcée</strong>, et la possibilité de <strong>restreindre
+      l'accès de l'école</strong> à une personne perturbatrice — en informant l'IEN. »</p>
+
+    <h4>6. Autorité fonctionnelle ou hiérarchique ?</h4>
+    <p>« <strong>Fonctionnelle</strong>. J'organise le travail, je donne le cadre, je coordonne.
+      Mais je n'évalue pas, je ne sanctionne pas un enseignant. Pour ça, je <strong>saisis
+      l'IEN</strong>. »</p>
+
+    <h4>7. Qui est votre supérieur ?</h4>
+    <p>« L'<strong>IEN</strong> de la circonscription. Au-dessus : le <strong>DASEN</strong>. »</p>
+
+    <h4>8. Que doit contenir le projet d'école ?</h4>
+    <p>« Des <strong>objectifs</strong>, des <strong>actions concrètes</strong>, des <strong>indicateurs
+      de réussite</strong> et un <strong>suivi</strong>. Il porte sur 3 à 5 ans, il est adopté par le
+      <strong>conseil d'école</strong> et il est évalué. »</p>
+
+    <h4>9. Quelle est la différence entre le conseil des maîtres et le conseil d'école ?</h4>
+    <p>« Le <strong>conseil des maîtres</strong> réunit les <strong>enseignants</strong> (au moins
+      1 fois par trimestre). Le <strong>conseil d'école</strong> réunit les enseignants,
+      les <strong>parents élus</strong>, la <strong>mairie</strong> et l'IEN (au moins 3 fois par an).
+      Il adopte le projet d'école et le règlement. »</p>
+
+    <h4>10. Que savez-vous du PPMS ?</h4>
+    <p>« Le <strong>Plan Particulier de Mise en Sécurité</strong> est obligatoire. Il prévoit les
+      conduites à tenir selon les risques : intrusion, incendie, risque industriel, inondation.
+      Le directeur le rédige, le fait connaître à l'équipe et organise des <strong>exercices</strong>. »</p>
+
+    <h3><span class="ico">🚨</span> C. Situations professionnelles (les plus nombreuses !)</h3>
+    <p>Ces questions commencent presque toutes par : <em>« Vous êtes directeur, et… que faites-vous ? »</em>
+      → Utilise <strong>toujours</strong> la méthode des 4 réflexes.</p>
+    <ul>
+      <li><strong>11.</strong> Coupure d'électricité → <a href="#situations">Cas n° 1</a></li>
+      <li><strong>12.</strong> Parent violent qui frappe un enseignant → <a href="#situations">Cas n° 2</a></li>
+      <li><strong>13.</strong> Un parent accuse un enseignant d'avoir frappé son enfant → <a href="#situations">Cas n° 3</a></li>
+      <li><strong>14.</strong> Un élève se blesse → <a href="#situations">Cas n° 4</a></li>
+      <li><strong>15.</strong> Un enfant est en danger chez lui → <a href="#situations">Cas n° 5</a></li>
+      <li><strong>16.</strong> Un enseignant absent non remplacé → <a href="#situations">Cas n° 6</a></li>
+      <li><strong>17.</strong> Une intrusion dans l'école → <a href="#situations">Cas n° 7</a></li>
+      <li><strong>18.</strong> Un élève a disparu → <a href="#situations">Cas n° 8</a></li>
+      <li><strong>19.</strong> Harcèlement entre élèves → <a href="#situations">Cas n° 9</a></li>
+      <li><strong>20.</strong> Conflit entre deux enseignants → <a href="#situations">Cas n° 10</a></li>
+      <li><strong>21.</strong> Élève en situation de handicap sans AESH → <a href="#situations">Cas n° 11</a></li>
+      <li><strong>22.</strong> Parent menaçant qui refuse de partir → <a href="#situations">Cas n° 12</a></li>
+    </ul>
+
+    <h3><span class="ico">🧩</span> D. Questions pièges (les plus redoutées)</h3>
+
+    <h4>23. Un enseignant refuse de suivre une organisation que vous avez décidée. Que faites-vous ?</h4>
+    <p>« Je commence par <strong>le dialogue en tête-à-tête</strong> : comprendre son point de vue,
+      rappeler le cadre, chercher une solution. S'il persiste, ce n'est plus de mon ressort :
+      je <strong>saisis l'IEN</strong>, en ayant <strong>tracé</strong> les échanges. Je ne passe ni
+      par la sanction (je ne peux pas) ni par le conflit public. »</p>
+
+    <h4>24. Un parent refuse de venir chercher son enfant à la sortie. Que faites-vous ?</h4>
+    <p>« Je <strong>garde l'enfant en sécurité</strong> et je fais <strong>appel aux personnes
+      autorisées</strong> (celles inscrites au dossier). Si personne ne vient, j'appelle la
+      <strong>gendarmerie</strong> si nécessaire en fin de service, j'informe l'<strong>IEN</strong>
+      et je <strong>trace</strong>. L'enfant ne reste jamais seul et on ne le laisse pas partir
+      avec quelqu'un qui n'est pas autorisé. »</p>
+
+    <h4>25. Que répondez-vous à un parent qui dit : « Vous n'êtes pas capable de gérer l'école » ?</h4>
+    <p>« Je ne réponds pas à la provocation. Je reformule : "<strong>Qu'est-ce qui vous préoccupe
+      concrètement ?</strong>" Je traite le problème factuel, je propose un rendez-vous posé,
+      et je trace. Si le ton devient menaçant, j'applique le cas n° 12. »</p>
+
+    <div class="callout ok">
+      <div class="ct">✅ La formule de secours (si tu sèches)</div>
+      <p>« <strong>Avec ce que je sais, voilà ce que je ferais : je sécurise, j'alerte, je trace et je
+        protège. Mais je ne reste jamais seul sur une situation grave — j'informe mon inspecteur et je
+        m'appuie sur le cadre réglementaire.</strong> »</p>
+      <p>Cette réponse est <strong>toujours</strong> juste, quel que soit le cas.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 8. PLAN DE PRÉPARATION ══════════ -->
+  <section id="plan">
+    <div class="kicker">Section 8 — Ton plan d'action</div>
+    <h2>📅 Mon plan de préparation</h2>
+
+    <h3><span class="ico">🗓️</span> Sur 4 semaines</h3>
+    <table>
+      <tr><th>Semaine</th><th>Ce que je fais</th><th>Objectif</th></tr>
+      <tr>
+        <td><strong>Semaine 1</strong></td>
+        <td>Lire ce site en entier. Apprendre <strong>la loi Rilhac</strong> et les 4 réflexes.</td>
+        <td>Comprendre la fonction</td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 2</strong></td>
+        <td>Écrire ma <strong>présentation</strong> (2 pages) et la relire à voix haute.
+          Apprendre les 12 cas d'urgence.</td>
+        <td>Savoir se présenter</td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 3</strong></td>
+        <td>Me faire interroger à l'oral sur les <strong>25 questions</strong>
+          (par quelqu'un, ou en m'enregistrant).</td>
+        <td>S'entraîner à l'oral</td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 4</strong></td>
+        <td>Révisions rapides : les 4 réflexes, les cas difficiles, les textes officiels.
+          Préparer ma <strong>question</strong> à poser au jury.</td>
+        <td>Être prêt</td>
+      </tr>
+    </table>
+
+    <h3><span class="ico">✅</span> Ma checklist finale</h3>
+    <ul class="chk">
+      <li>Je peux expliquer la <strong>loi Rilhac</strong> en 2 minutes</li>
+      <li>Je connais la différence <strong>autorité fonctionnelle / hiérarchique</strong></li>
+      <li>Je connais les <strong>4 réflexes</strong> par cœur (sécuriser, alerter, tracer, protéger)</li>
+      <li>Je sais citer <strong>3 cas d'urgence</strong> et les traiter</li>
+      <li>Je connais le <strong>PPMS</strong> et son contenu</li>
+      <li>Je connais le <strong>conseil d'école</strong> et le <strong>conseil des maîtres</strong></li>
+      <li>Je sais ce qu'est l'<strong>obligation de signalement</strong></li>
+      <li>Je connais mon <strong>IEN</strong> et le <strong>DASEN</strong> (rôle de chacun)</li>
+      <li>J'ai écrit ma <strong>présentation</strong> (2 pages)</li>
+      <li>J'ai une <strong>question à poser</strong> au jury préparée</li>
+      <li>Je sais dire <strong>« je ne sais pas »</strong> sans paniquer</li>
+    </ul>
+
+    <div class="callout info">
+      <div class="ct">💡 Le conseil décisif</div>
+      <p>À l'oral, <strong>le jury ne cherche pas un expert</strong> : il cherche quelqu'un de
+        <strong>solide, lucide et fiable</strong>. Tu peux ne pas savoir un détail réglementaire —
+        mais tu dois montrer que tu sais <strong>où le chercher</strong> et <strong>à qui
+        t'adresser</strong>. C'est ça, la compétence d'un directeur.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 9. SOURCES ══════════ -->
+  <section id="sources">
+    <div class="kicker">Section 9</div>
+    <h2>📖 Les sources officielles</h2>
+
+    <div class="callout warn">
+      <div class="ct">⚠️ Note importante</div>
+      <p>Les sites officiels (education.gouv.fr, legifrance.gouv.fr) <strong>bloquent l'accès
+        automatique</strong>. Les références ci-dessous sont <strong>exactes</strong> — ouvre-les
+        depuis ton navigateur (sur ton téléphone ou ton ordinateur) et garde-les en favoris.
+        <strong>Seuls les textes publiés au JO et au BO font foi.</strong></p>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Loi n° 2021-1716 du 21 décembre 2021 — loi Rilhac</div>
+      <div class="ref-meta"><span class="tag loi">LOI</span><span class="tag bo">JORF</span></div>
+      <div class="rd">Crée la fonction de directrice ou directeur d'école. <strong>LE texte à connaître.</strong></div>
+      <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044542629" target="_blank">🔗 Lire la loi sur Légifrance →</a>
+    </div>
+
+    <div class="ref">
+      <div class="rt">La fonction de directeur d'école — Ministère</div>
+      <div class="ref-meta"><span class="tag site">SITE</span></div>
+      <div class="rd">Présentation officielle de la fonction, des missions et des procédures d'accès
+        à la liste d'aptitude.</div>
+      <div class="url">https://www.education.gouv.fr/</div>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Le Bulletin Officiel — recrutement des directeurs</div>
+      <div class="ref-meta"><span class="tag bo">BO</span></div>
+      <div class="rd">Les notes de service qui organisent chaque année l'<strong>inscription sur la
+        liste d'aptitude</strong> (conditions, dossier, calendrier, composition du jury).
+        <strong>À demander à ton IEN ou au DSDEN de Mayotte.</strong></div>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Code de l'éducation</div>
+      <div class="ref-meta"><span class="tag loi">CODE</span></div>
+      <div class="rd">Articles <strong>L111-1</strong> (service public), <strong>L411-1</strong> (direction
+        de l'école), <strong>D411-1 à D411-9</strong> (conseil d'école, conseil des maîtres).</div>
+      <a href="https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006071191/" target="_blank">🔗 Lire le code de l'éducation →</a>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Charte de la laïcité à l'école</div>
+      <div class="ref-meta"><span class="tag guide">GUIDE</span></div>
+      <div class="rd">Les 15 articles de la charte, à afficher dans l'école. Le directeur est le
+        garant de son application.</div>
+      <div class="url">https://www.education.gouv.fr/</div>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Vademecum « La sécurité à l'école »</div>
+      <div class="ref-meta"><span class="tag guide">GUIDE</span></div>
+      <div class="rd">Les conduites à tenir en cas de danger : PPMS, intrusion, évacuation, confinement.
+        <strong>À connaître pour les cas n° 1 et n° 7.</strong></div>
+    </div>
+
+    <div class="ref">
+      <div class="rt">Les sites syndicaux — banques de sujets</div>
+      <div class="ref-meta"><span class="tag syndicat" style="background:#f3e8fd;color:#6a1ab5">RESSOURCE</span></div>
+      <div class="rd">SNUipp-FSU, SE-Unsa, SNUDI-FO publient régulièrement des
+        <strong>guides de préparation</strong> et des <strong>témoignages de directeurs</strong>.
+        Cherche « préparer l'entretien liste d'aptitude directeur d'école ».</div>
+    </div>
+
+    <div class="callout ok">
+      <div class="ct">📞 Ta meilleure source : les gens autour de toi</div>
+      <ul>
+        <li><strong>Ton IEN</strong> : demande-lui les attendus exacts de l'entretien dans ton académie.</li>
+        <li><strong>Un directeur d'école en poste</strong> : demande-lui 1 heure de son temps pour
+          « ce que personne ne te dit ».</li>
+        <li><strong>Le DSDEN de Mayotte</strong> : c'est lui qui publie le calendrier et le dossier.</li>
+        <li><strong>Ton chef d'établissement actuel</strong> (au collège de M'Tsamboro) : son avis peut
+          accompagner ton dossier.</li>
+      </ul>
+    </div>
+  </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>🎓 <strong>Guide de préparation — Liste d'aptitude de directeur d'école</strong></p>
+  <p>Préparé pour M. Jacques Hassani Moustoifa · professeur des écoles · Mayotte</p>
+  <p style="margin-top:10px;font-size:.76rem">
+    ⚠️ Ce document est un <strong>outil de préparation</strong>. Il ne remplace pas les textes officiels :
+    seuls les textes publiés au <strong>Journal officiel</strong> et au <strong>Bulletin officiel de
+    l'Éducation nationale</strong> font foi. Les numéros de décrets d'application sont à vérifier
+    sur Légifrance avant l'entretien.
+  </p>
+  <p style="margin-top:12px;font-size:.76rem;color:#8494a8">
+    Version 1.0 · Document évolutif — sera complété avec les documents officiels du dossier.
+  </p>
+</footer>
+
+<script>
+  // Surlignage de la section active dans le sommaire
+  const sections = document.querySelectorAll('main section[id]');
+  const links = document.querySelectorAll('#nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`#nav a[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-90px 0px -65% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
