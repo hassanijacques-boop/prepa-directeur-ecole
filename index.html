@@ -142,6 +142,81 @@
 
   footer{text-align:center;color:var(--muted);font-size:.81rem;padding:26px 16px;border-top:1px solid var(--line)}
   @media print{ .sidebar,.topbar{display:none} .layout{display:block} section{break-inside:avoid} }
+
+  /* ── COMPTE À REBOURS ── */
+  .cd-wrap{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}
+  .cd{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:13px;
+    padding:11px 18px;min-width:120px}
+  .cd .lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.9px;color:#a9c7ef;font-weight:800}
+  .cd .val{font-size:1.55rem;font-weight:800;color:#fff;line-height:1.25;margin-top:3px}
+  .cd.urgent{background:rgba(255,120,100,.2);border-color:rgba(255,150,130,.6)}
+  .cd.urgent .val{color:#ffd9d2}
+
+  /* ── LEXIQUE ── */
+  .lex{display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));margin:14px 0}
+  .lex .item{background:#fbfcfe;border:1px solid var(--line);border-left:3px solid var(--bleu);
+    border-radius:9px;padding:10px 13px}
+  .lex .sig{font-weight:800;color:var(--navy);font-size:.9rem}
+  .lex .dev{font-size:.79rem;color:var(--bleu);font-style:italic;margin:1px 0 4px}
+  .lex .exp{font-size:.83rem;color:#3a4756}
+
+  /* ── QUIZ ── */
+  .qz{background:#fbfcfe;border:1px solid var(--line);border-radius:13px;padding:17px;margin:14px 0}
+  .qz .qh{font-weight:800;color:var(--navy);margin-bottom:12px;font-size:.95rem;line-height:1.45}
+  .qz .opt{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);
+    border-radius:9px;padding:10px 13px;margin-bottom:7px;font-size:.87rem;cursor:pointer;
+    font-family:inherit;color:var(--txt);transition:.15s}
+  .qz .opt:hover{border-color:var(--bleu);background:#f2f7ff}
+  .qz .opt.ok{background:#e6f7ec;border-color:#2ba05f;color:#0d5c31;font-weight:700}
+  .qz .opt.ko{background:#fdeaea;border-color:#d9534f;color:#8b1f1c}
+  .qz .fb{font-size:.85rem;margin-top:9px;padding:10px 12px;border-radius:9px;display:none}
+  .qz .fb.show{display:block}
+  .qz .fb.ok{background:#e6f7ec;color:#0d5c31;border-left:3px solid #2ba05f}
+  .qz .fb.ko{background:#fdeaea;color:#8b1f1c;border-left:3px solid #d9534f}
+  .qz-bar{background:#e2e8f0;border-radius:99px;height:9px;overflow:hidden;margin:12px 0 4px}
+  .qz-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--bleu),#4ade80);
+    width:0;transition:width .35s}
+  .qz-note{font-size:.84rem;color:var(--muted);font-weight:700}
+  .btn{display:inline-block;background:var(--navy);color:#fff;border:0;border-radius:10px;
+    padding:11px 20px;font-size:.88rem;font-weight:800;cursor:pointer;font-family:inherit;
+    margin:5px 5px 5px 0;transition:.18s}
+  .btn:hover{background:var(--bleu);transform:translateY(-1px)}
+  .btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+  .btn.ghost:hover{background:var(--bleu-clair);color:var(--bleu);border-color:var(--bleu)}
+
+  /* ── SIMULATEUR D'ENTRETIEN ── */
+  .simu{background:linear-gradient(150deg,#12294d,#22497f);border-radius:14px;padding:22px;color:#fff}
+  .simu .q{font-size:1.06rem;font-weight:700;line-height:1.5;min-height:64px}
+  .simu .meta{font-size:.76rem;color:#a9c7ef;text-transform:uppercase;letter-spacing:.8px;
+    font-weight:800;margin-bottom:8px}
+  .simu .timer{font-size:1.9rem;font-weight:800;color:#8fbcf5;font-variant-numeric:tabular-nums}
+  .simu .hintit{font-size:.85rem;color:#c8dbf5;background:rgba(255,255,255,.09);border-radius:9px;
+    padding:11px 13px;margin-top:12px;display:none}
+  .simu .hintit.show{display:block}
+  .simu .btn{background:#fff;color:var(--navy)}
+  .simu .btn:hover{background:#8fbcf5}
+  .simu .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+  .simu .btn.ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+
+  /* ── CHECKLIST INTERACTIVE ── */
+  .chk li{cursor:pointer;user-select:none;transition:.15s}
+  .chk li:hover{border-color:var(--bleu)}
+  .chk li.done{opacity:.55;text-decoration:line-through}
+  .chk li.done::before{content:'☑';color:var(--vert)}
+
+  /* ── IMPRESSION ── */
+  @media print{
+    .topbar,.sidebar,.btn,.simu,.qz,.cd-wrap{display:none !important}
+    body{background:#fff;font-size:10.5pt}
+    .layout{display:block;padding:0}
+    section{border:0;box-shadow:none;padding:0 0 14px;margin-bottom:14px;break-inside:auto}
+    .hero{background:#fff !important;color:#000 !important;padding:0 0 12px}
+    .hero h1,.hero p,.hero .badge{color:#000 !important}
+    h2,h3,h4{break-after:avoid}
+    table,.cas,.card,.callout{break-inside:avoid}
+    a{color:#000;text-decoration:none}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555}
+  }
 </style>
 </head>
 <body>
@@ -158,8 +233,22 @@
     <p>Tout ce qu'il faut savoir : <strong>le calendrier officiel</strong>, la loi Rilhac et le
        décret de 2023, les missions, les situations d'urgence à maîtriser, et l'entretien devant
        la commission. Préparé pour <strong>M. Jacques Hassani Moustoifa</strong>.</p>
+
+    <div class="cd-wrap" id="cdwrap">
+      <div class="cd" id="cd-dossier">
+        <div class="lbl">📋 Dossier à déposer</div>
+        <div class="val" id="cd-jours">…</div>
+        <div class="lbl" style="text-transform:none;letter-spacing:0">avant le 6 nov. 2026</div>
+      </div>
+      <div class="cd" id="cd-entretien">
+        <div class="lbl">🎤 Entretien</div>
+        <div class="val" id="cd-jours2">…</div>
+        <div class="lbl" style="text-transform:none;letter-spacing:0">semaine du 1ᵉʳ déc. 2026</div>
+      </div>
+    </div>
+
     <div class="stats">
-      <div><b>16</b>sections</div>
+      <div><b>19</b>sections</div>
       <div><b>12</b>cas d'urgence</div>
       <div><b>30</b>questions et cas</div>
       <div><b>3</b>textes officiels</div>
@@ -189,6 +278,9 @@
       <a href="#questions"><span class="n">14</span> Les questions du jury</a>
       <a href="#plan"><span class="n">15</span> Mon plan de préparation</a>
       <a href="#sources"><span class="n">16</span> 📖 Les sources officielles</a>
+      <a href="#lexique"><span class="n">17</span> 📇 Le lexique des sigles</a>
+      <a href="#quiz"><span class="n">18</span> 🎯 Quiz d'auto-évaluation</a>
+      <a href="#simulateur"><span class="n">19</span> 🎤 Simulateur d'entretien</a>
     </nav>
   </aside>
 
@@ -2668,6 +2760,115 @@
     </div>
   </section>
 
+  <!-- ══════════ 17. LEXIQUE ══════════ -->
+  <section id="lexique">
+    <div class="kicker">Section 17 — Le vocabulaire du jury</div>
+    <h2>📇 Le lexique des sigles</h2>
+    <p>Le jury les emploie <strong>sans les expliquer</strong>. Si tu hésites sur un seul,
+      tu perds de la crédibilité. Voici tous ceux qui peuvent tomber.</p>
+
+    <h3><span class="ico">👥</span> Les personnes et les instances</h3>
+    <div class="lex">
+      <div class="item"><div class="sig">IEN</div><div class="dev">Inspecteur de l'Éducation nationale</div><div class="exp">Ton supérieur hiérarchique direct. C'est à lui que tu rends compte.</div></div>
+      <div class="item"><div class="sig">IA-DASEN / DASEN</div><div class="dev">Inspecteur d'académie – Directeur académique des services de l'Éducation nationale</div><div class="exp">Au-dessus de l'IEN. Il dirige les services de l'Éducation nationale dans le département.</div></div>
+      <div class="item"><div class="sig">DSDEN</div><div class="dev">Direction des services départementaux de l'Éducation nationale</div><div class="exp">Le service administratif du département (personnels, moyens).</div></div>
+      <div class="item"><div class="sig">AESH</div><div class="dev">Accompagnant d'élève en situation de handicap</div><div class="exp">L'adulte qui accompagne un élève handicapé. Le directeur coordonne son emploi du temps.</div></div>
+      <div class="item"><div class="sig">ATSEM</div><div class="dev">Agent territorial spécialisé des écoles maternelles</div><div class="exp">Employé de la mairie, il travaille en classe de maternelle.</div></div>
+      <div class="item"><div class="sig">DDEN</div><div class="dev">Délégué départemental de l'Éducation nationale</div><div class="exp">Bénévole nommé, il siège au conseil d'école (voix consultative).</div></div>
+    </div>
+
+    <h3><span class="ico">🎓</span> Les documents de suivi de l'élève</h3>
+    <div class="lex">
+      <div class="item"><div class="sig">GEVA-Sco</div><div class="dev">Guide d'ÉVAluation des besoins de compensation en matière de Scolarisation</div><div class="exp">⭐ Le document que le DIRECTEUR remplit pour alimenter la MDPH. Support de l'ESS.</div></div>
+      <div class="item"><div class="sig">ESS</div><div class="dev">Équipe de suivi de scolarisation</div><div class="exp">La réunion annuelle pour chaque élève avec un PPS. Présidée par l'enseignant référent.</div></div>
+      <div class="item"><div class="sig">PPS</div><div class="dev">Projet personnalisé de scolarisation</div><div class="exp">Pour un élève reconnu handicapé. Décidé par la MDPH.</div></div>
+      <div class="item"><div class="sig">PAP</div><div class="dev">Plan d'accompagnement personnalisé</div><div class="exp">Troubles des apprentissages (dys). Décidé par le médecin scolaire.</div></div>
+      <div class="item"><div class="sig">PPRE</div><div class="dev">Programme personnalisé de réussite éducative</div><div class="exp">Difficulté scolaire passagère. Décidé par l'école.</div></div>
+      <div class="item"><div class="sig">PAI</div><div class="dev">Projet d'accueil individualisé</div><div class="exp">Problème de santé (allergie, asthme). Établi par le médecin scolaire.</div></div>
+      <div class="item"><div class="sig">ULIS</div><div class="dev">Unité localisée pour l'inclusion scolaire</div><div class="exp">Dispositif pour un petit groupe d'élèves handicapés.</div></div>
+    </div>
+
+    <h3><span class="ico">🛡️</span> La protection de l'enfance</h3>
+    <div class="lex">
+      <div class="item"><div class="sig">CRIP</div><div class="dev">Cellule de recueil des informations préoccupantes</div><div class="exp">Au Conseil départemental. C'est là qu'on adresse une « information préoccupante ».</div></div>
+      <div class="item"><div class="sig">ASE</div><div class="dev">Aide sociale à l'enfance</div><div class="exp">Le service du département qui protège les mineurs en danger.</div></div>
+      <div class="item"><div class="sig">IP</div><div class="dev">Information préoccupante</div><div class="exp">Le signalement de « niveau 2 » : des indices sérieux, sans danger immédiat.</div></div>
+      <div class="item"><div class="sig">119</div><div class="dev">Allô Enfance en Danger</div><div class="exp">24h/24 · gratuit · anonyme. Le n° à connaître par cœur.</div></div>
+    </div>
+
+    <h3><span class="ico">🏫</span> Le fonctionnement de l'école</h3>
+    <div class="lex">
+      <div class="item"><div class="sig">PPMS</div><div class="dev">Plan particulier de mise en sécurité</div><div class="exp">Le document de sécurité de l'école (intrusion, incendie, inondation…).</div></div>
+      <div class="item"><div class="sig">PEDT</div><div class="dev">Projet éducatif territorial</div><div class="exp">Le projet de la mairie qui articule scolaire et périscolaire.</div></div>
+      <div class="item"><div class="sig">OCCE</div><div class="dev">Office central de la coopération à l'école</div><div class="exp">L'association à laquelle la coopérative scolaire est souvent affiliée.</div></div>
+      <div class="item"><div class="sig">ONDE</div><div class="dev">Outils numériques pour les directeurs d'école</div><div class="exp">L'application où l'on déclare les effectifs et les absences.</div></div>
+      <div class="item"><div class="sig">LSU</div><div class="dev">Livret scolaire unique</div><div class="exp">Le bilan des acquis de l'élève, remis aux familles.</div></div>
+      <div class="item"><div class="sig">SMA</div><div class="dev">Service minimum d'accueil</div><div class="exp">L'accueil des élèves pendant une grève, organisé avec la mairie.</div></div>
+    </div>
+
+    <h3><span class="ico">🌍</span> Les élèves à besoins particuliers</h3>
+    <div class="lex">
+      <div class="item"><div class="sig">EANA</div><div class="dev">Élève allophone nouvellement arrivant</div><div class="exp">Un élève qui ne parle pas (encore) français. Enjeu majeur à Mayotte.</div></div>
+      <div class="item"><div class="sig">UPE2A</div><div class="dev">Unité pédagogique pour élèves allophones arrivants</div><div class="exp">Dispositif d'accueil des EANA. <strong>Tu y as enseigné !</strong></div></div>
+      <div class="item"><div class="sig">FLS</div><div class="dev">Français langue seconde</div><div class="exp">Ta <strong>certification complémentaire</strong> de 2016.</div></div>
+      <div class="item"><div class="sig">RASED</div><div class="dev">Réseau d'aides spécialisées aux élèves en difficulté</div><div class="exp">Psychologue scolaire + maîtres spécialisés (G et H).</div></div>
+      <div class="item"><div class="sig">MDPH</div><div class="dev">Maison départementale des personnes handicapées</div><div class="exp">L'instance qui reconnaît le handicap et notifie les aides.</div></div>
+      <div class="item"><div class="sig">SEGPA</div><div class="dev">Section d'enseignement général et professionnel adapté</div><div class="exp">Pour les élèves en grande difficulté. <strong>Tu y as enseigné 6 ans !</strong></div></div>
+    </div>
+
+    <div class="callout ok">
+      <div class="ct">✅ Le bon réflexe en entretien</div>
+      <p>Si un sigle t'échappe : <strong>demande poliment</strong> ou déroule-le en clair.
+        « Je suppose que vous parlez du <strong>livret scolaire unique</strong> ? » — ça montre
+        que tu connais la chose, même si l'acronyme ne vient pas. <strong>Ne jamais bluffer.</strong></p>
+    </div>
+  </section>
+
+  <!-- ══════════ 18. QUIZ ══════════ -->
+  <section id="quiz">
+    <div class="kicker">Section 18 — Teste-toi</div>
+    <h2>🎯 Quiz d'auto-évaluation</h2>
+    <p>30 questions tirées du site. <strong>Réponds sans regarder</strong>, puis vérifie.
+      Tu peux recommencer autant de fois que tu veux.</p>
+
+    <div class="qz-bar"><i id="qzbar"></i></div>
+    <div class="qz-note" id="qznote">0 / 0 · Score : —</div>
+    <div id="qzbox"></div>
+    <button class="btn" id="qzrestart" style="display:none" onclick="qzRestart()">🔄 Recommencer le quiz</button>
+  </section>
+
+  <!-- ══════════ 19. SIMULATEUR ══════════ -->
+  <section id="simulateur">
+    <div class="kicker">Section 19 — Entraîne-toi à l'oral</div>
+    <h2>🎤 Simulateur d'entretien</h2>
+    <p>Comme le vrai entretien : une question tombe, tu as <strong>2 minutes</strong> pour répondre
+      à voix haute. Ne clique sur l'aide qu'<strong>après</strong> avoir parlé. 💪</p>
+
+    <div class="simu">
+      <div class="meta" id="sim-cat">Prêt ?</div>
+      <div class="q" id="sim-q">Appuie sur « Question suivante » pour commencer.</div>
+      <div class="timer" id="sim-timer" style="margin-top:12px">2:00</div>
+      <div class="hintit" id="sim-hint"></div>
+      <div style="margin-top:14px">
+        <button class="btn" id="sim-next" onclick="simNext()">▶ Question suivante</button>
+        <button class="btn ghost" id="sim-start" onclick="simToggleTimer()">⏱️ Démarrer le chrono</button>
+        <button class="btn ghost" id="sim-aide" onclick="simAide()" style="display:none">💡 Voir l'aide</button>
+      </div>
+    </div>
+
+    <div class="callout info" style="margin-top:18px">
+      <div class="ct">💡 Comment bien t'entraîner</div>
+      <ol>
+        <li><strong>Réponds à voix haute</strong> (pas dans ta tête) — c'est la seule façon de repérer
+          si tu cherches tes mots.</li>
+        <li><strong>Enregistre-toi</strong> avec ton téléphone et réécoute.</li>
+        <li><strong>Chronomètre 2 minutes</strong> : un jury t'arrêtera si tu parles trop longtemps.</li>
+        <li>Utilise <strong>toujours les 4 réflexes</strong> : je sécurise, j'alerte, je trace, je protège.</li>
+        <li>Demande à quelqu'un de te poser les questions — <strong>sans regarder la réponse.</strong></li>
+      </ol>
+    </div>
+  </section>
+
   </main>
 </div>
 
@@ -2686,19 +2887,270 @@
 </footer>
 
 <script>
-  // Surlignage de la section active dans le sommaire
+  /* ════════ 1. SOMMAIRE — surlignage de la section active ════════ */
   const sections = document.querySelectorAll('main section[id]');
-  const links = document.querySelectorAll('#nav a');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const link = document.querySelector(`#nav a[href="#${entry.target.id}"]`);
-        if (link) link.classList.add('active');
+  const navLinks = document.querySelectorAll('#nav a');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector('#nav a[href="#' + entry.target.id + '"]');
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-90px 0px -65% 0px' });
+    sections.forEach(s => observer.observe(s));
+  }
+
+  /* ════════ 2. COMPTE À REBOURS ════════ */
+  (function compteARebours(){
+    const cible = {
+      'cd-jours':  new Date('2026-11-06T23:59:59'),
+      'cd-jours2': new Date('2026-12-01T08:00:00')
+    };
+    const maintenant = new Date();
+    Object.keys(cible).forEach(function(id){
+      const el = document.getElementById(id);
+      if (!el) return;
+      const jours = Math.ceil((cible[id] - maintenant) / 86400000);
+      if (jours > 1) {
+        el.innerHTML = jours + ' <span style="font-size:.62em;font-weight:600">jours</span>';
+      } else if (jours === 1) {
+        el.textContent = 'DEMAIN';
+      } else if (jours === 0) {
+        el.textContent = "AUJOURD'HUI";
+      } else {
+        el.textContent = 'passé';
+      }
+      if (jours <= 30) {
+        const boite = el.closest('.cd');
+        if (boite) boite.classList.add('urgent');
       }
     });
-  }, { rootMargin: '-90px 0px -65% 0px' });
-  sections.forEach(s => observer.observe(s));
+  })();
+
+  /* ════════ 3. QUIZ D'AUTO-ÉVALUATION ════════ */
+  const QZ = [
+    {q:"Que signifie GEVA-Sco ?", o:["Gestion des Évaluations Validées pour les Scolarités","Guide d'ÉVAluation des besoins de compensation en matière de Scolarisation","Grand Évaluateur des Acquis Scolaires"], r:1, e:"C'est le document support de l'ESS, que le directeur remplit pour alimenter la MDPH."},
+    {q:"La commission départementale d'entretien est composée de…", o:["3 membres","5 membres","7 membres"], r:0, e:"L'IA-DASEN (ou son représentant), un IEN et un directeur d'école. La note officielle est précise."},
+    {q:"Quelle est la différence entre autorité fonctionnelle et hiérarchique ?", o:["Aucune, c'est la même chose","Le directeur organise le travail mais n'évalue ni ne sanctionne ses collègues","Le directeur peut sanctionner les enseignants"], r:1, e:"La loi Rilhac donne une autorité FONCTIONNELLE : il organise, coordonne — mais il saisit l'IEN pour tout problème disciplinaire."},
+    {q:"Un directeur qui n'a pas signalé un enfant en danger risque…", o:["Rien, c'est au DASEN de le faire","Une sanction administrative seulement","Jusqu'à 3 ans de prison et 45 000 € d'amende"], r:2, e:"Art. 434-3 du Code pénal : la non-dénonciation de violences sur un mineur est un délit."},
+    {q:"Que fait-on en cas de coupure d'électricité ?", o:["On évacue immédiatement dans le noir","On garde les élèves en sécurité, on alerte la mairie (bâtiment) et on informe l'IEN","On répare soi-même le disjoncteur"], r:1, e:"On n'évacue JAMAIS dans le noir. La mairie est propriétaire des bâtiments, l'IEN doit être informé."},
+    {q:"Quel texte a créé la fonction de directeur d'école ?", o:["La loi n° 2021-1716 du 21 décembre 2021 (loi Rilhac)","Le décret n° 2023-777","La loi de 2004 sur la laïcité"], r:0, e:"La loi Rilhac crée la fonction ; le décret 2023-777 en est le décret d'application."},
+    {q:"Qui est le supérieur hiérarchique direct du directeur d'école ?", o:["Le maire","L'IEN de la circonscription","Le DASEN"], r:1, e:"L'IEN. Au-dessus de lui : le DASEN puis le recteur."},
+    {q:"Le conseil d'école se réunit au minimum…", o:["1 fois par an","3 fois par an","1 fois par trimestre"], r:1, e:"Au moins 3 fois par an, dont un dans les 15 jours après la rentrée."},
+    {q:"Le conseil des maîtres se réunit au minimum…", o:["1 fois par trimestre","3 fois par an","2 fois par an"], r:0, e:"Au moins une fois par trimestre. Il réunit les enseignants, présidé par le directeur."},
+    {q:"La coopérative scolaire est…", o:["Un compte de l'école géré par la mairie","Une association loi 1901 indépendante de l'école","Une caisse du directeur"], r:1, e:"C'est une association loi 1901 (souvent affiliée à l'OCCE), indépendante de l'école."},
+    {q:"La coopérative scolaire peut-elle payer l'entretien des bâtiments ?", o:["Oui, si l'école n'a pas les moyens","Non, c'est à la mairie de le faire","Oui, avec l'accord des parents"], r:1, e:"L'école est GRATUITE : la coopérative finance l'extra (projets, sorties), jamais l'obligatoire (bâtiment, manuels)."},
+    {q:"En cas de responsabilité CIVILE pour un dommage causé dans l'exercice des fonctions…", o:["Le directeur paie personnellement","L'État est responsable et indemnise la victime","La mairie paie"], r:1, e:"L'État est substitué à l'agent. La responsabilité PÉNALE, en revanche, reste personnelle."},
+    {q:"Que faire si un parent accuse un enseignant d'avoir frappé son enfant ?", o:["Mener soi-même l'enquête et confronter les deux","Écouter, tracer par écrit, et transmettre immédiatement à l'IEN","Renvoyer le parent chez lui sans suite"], r:1, e:"Le directeur ne mène pas l'enquête : il écoute sans juger, trace, et saisit l'IEN."},
+    {q:"Que signifie IEN ?", o:["Inspection de l'École Nouvelle","Inspecteur de l'Éducation nationale","Institut d'Éducation Numérique"], r:1, e:"C'est ton supérieur hiérarchique de circonscription."},
+    {q:"Un élève en situation de handicap arrive sans AESH. Que fait-on ?", o:["On refuse l'accueil en attendant l'AESH","On l'accueille et on signale l'absence d'AESH à l'IEN","On le met dans une classe à part"], r:1, e:"L'accueil ne se négocie pas : l'élève a sa place. On aménage et on signale le manque à l'IEN."},
+    {q:"Que signifie PPMS ?", o:["Plan Particulier de Mise en Sécurité","Programme Pédagogique de Maîtrise Scolaire","Projet Pédagogique et de Modernisation"], r:0, e:"C'est le document de sécurité obligatoire de l'école (intrusion, incendie, inondation…)."},
+    {q:"Le droit à l'image d'un élève nécessite…", o:["Rien, l'école est un lieu public","Une autorisation écrite des parents","Une autorisation de l'IEN"], r:1, e:"Toute publication de photo/vidéo d'un élève exige une autorisation écrite des parents."},
+    {q:"Un journaliste appelle l'école pour un sujet sensible. Que fait le directeur ?", o:["Il répond pour défendre l'école","Il ne parle JAMAIS aux médias sans l'autorisation du DASEN","Il donne le nom des enseignants"], r:1, e:"Règle absolue : aucune communication aux médias sans l'accord du DASEN. On renvoie vers l'administration."},
+    {q:"Le numéro national « Allô Enfance en Danger » est…", o:["le 15","le 119","le 3919"], r:1, e:"Le 119 : 24h/24, gratuit, anonyme. Le 3919 concerne les violences faites aux femmes."},
+    {q:"Que signifie AESH ?", o:["Agent des Écoles et des Services Hospitaliers","Accompagnant d'élève en situation de handicap","Assistant d'Éducation Scolaire et Hors-scolaire"], r:1, e:"C'est l'adulte qui accompagne un élève en situation de handicap."},
+    {q:"Qui décide de la création d'un PPS ?", o:["L'école","Le médecin scolaire","La MDPH"], r:2, e:"Le PPS est décidé par la MDPH. Le PAP et le PAI relèvent du médecin scolaire ; le PPRE, de l'école."},
+    {q:"Un parent menace et refuse de quitter l'école. Quelle est la première chose à faire ?", o:["Appeler immédiatement le 17","Mettre les élèves à l'abri et garder son calme","Le pousser dehors"], r:1, e:"On protège d'abord les élèves, on reste calme, on appelle du renfort et le 17 si nécessaire."},
+    {q:"La formation obligatoire avant l'inscription sur la liste d'aptitude dure…", o:["1 jour","3 jours","5 jours"], r:1, e:"3 jours, en présentiel au 1er trimestre 2027 (arrêté du 28 novembre 2014)."},
+    {q:"Combien de temps une inscription sur la liste d'aptitude est-elle valable ?", o:["1 an","3 années scolaires","À vie"], r:1, e:"3 années scolaires, d'après la note du rectorat de Mayotte."},
+    {q:"En cas de doute sur une situation de maltraitance, que fait le directeur ?", o:["Il attend de voir si ça se reproduit","Il prévient la famille pour arranger les choses","Il trace et il signale — le secret professionnel ne s'y oppose pas"], r:2, e:"Art. L226-2-2 du CASF : le secret professionnel ne s'oppose pas au signalement d'un enfant en danger."},
+    {q:"Un directeur d'école a-t-il un pouvoir hiérarchique sur ses collègues enseignants ?", o:["Oui, il peut les sanctionner","Non, il a une autorité fonctionnelle seulement","Oui, il les évalue chaque année"], r:1, e:"Non : autorité fonctionnelle (organiser, coordonner), pas hiérarchique. C'est l'IEN qui tranche."},
+    {q:"Qu'est-ce qu'un PPRE ?", o:["Un programme personnalisé de réussite éducative décidé par l'école","Un projet de scolarisation pour les élèves handicapés","Un plan d'accompagnement pour les troubles dys"], r:0, e:"Le PPRE est interne à l'école, pour une difficulté scolaire passagère."},
+    {q:"Le taux d'encadrement d'une sortie scolaire est…", o:["Le même pour toutes les sorties","Plus exigeant pour les sorties occasionnelles","Plus exigeant pour les sorties régulières"], r:1, e:"Plus une sortie est occasionnelle (et lointaine), plus il faut d'adultes. Vérifie la circulaire en vigueur."},
+    {q:"Peut-on priver un élève de récréation en guise de punition ?", o:["Oui, c'est la punition la plus courante","Non, c'est interdit — on ne prive pas de récréation","Seulement avec l'accord des parents"], r:1, e:"Les punitions doivent être éducatives, proportionnées et non dégradantes. Pas de privation de récréation ni de nourriture."},
+    {q:"Que signifie EANA ?", o:["Élève Ayant des Notions Avancées","Élève allophone nouvellement arrivant","Élève avec un Aménagement Non Adapté"], r:1, e:"Un élève qui ne parle pas encore français — un enjeu majeur à Mayotte."}
+  ];
+
+  let qzOrdre = [], qzIdx = 0, qzBon = 0, qzFait = 0;
+
+  function qzMélange(a){
+    for (let i = a.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function qzRestart(){
+    qzOrdre = qzMélange(QZ.map((_, i) => i));
+    qzIdx = 0; qzBon = 0; qzFait = 0;
+    document.getElementById('qzrestart').style.display = 'none';
+    qzAffiche();
+  }
+
+  function qzAffiche(){
+    const box = document.getElementById('qzbox');
+    if (!box) return;
+    if (qzIdx >= qzOrdre.length){
+      const pct = QZ.length ? Math.round(qzBon / QZ.length * 100) : 0;
+      let verdict = '🟠 Continue à réviser — relis les sections 2, 3 et 5.';
+      if (pct >= 90) verdict = '🏆 Excellent ! Tu es prêt pour l&#39;entretien.';
+      else if (pct >= 75) verdict = '🟢 Très bon niveau. Revois juste tes erreurs.';
+      else if (pct >= 50) verdict = '🟡 Bonne base, mais il faut consolider.';
+      box.innerHTML = '<div class="qz" style="text-align:center"><div style="font-size:2.6rem;font-weight:800;color:var(--navy)">'
+        + qzBon + ' / ' + QZ.length + '</div><p style="font-weight:700;margin:8px 0 4px">' + verdict
+        + '</p><p style="font-size:.87rem;color:var(--muted);margin:0">Score : ' + pct + ' %</p></div>';
+      document.getElementById('qzbar').style.width = '100%';
+      document.getElementById('qznote').textContent = qzBon + ' / ' + QZ.length + ' · Score : ' + pct + ' %';
+      document.getElementById('qzrestart').style.display = 'inline-block';
+      return;
+    }
+    const item = QZ[qzOrdre[qzIdx]];
+    let h = '<div class="qz"><div class="qh">' + (qzIdx + 1) + '. ' + item.q + '</div>';
+    item.o.forEach(function(opt, i){
+      h += '<button class="opt" data-i="' + i + '">' + opt + '</button>';
+    });
+    h += '<div class="fb" id="qzfb"></div></div>';
+    box.innerHTML = h;
+    box.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        qzRepond(parseInt(btn.dataset.i, 10), item);
+      });
+    });
+    qzMajBarre();
+  }
+
+  function qzRepond(choix, item){
+    if (document.getElementById('qzfb').classList.contains('show')) return;
+    qzFait++;
+    const opts = document.querySelectorAll('#qzbox .opt');
+    opts.forEach(function(b, i){
+      if (i === item.r) b.classList.add('ok');
+      else if (i === choix) b.classList.add('ko');
+      b.disabled = true;
+    });
+    const bon = choix === item.r;
+    if (bon) qzBon++;
+    const fb = document.getElementById('qzfb');
+    fb.className = 'fb show ' + (bon ? 'ok' : 'ko');
+    fb.innerHTML = '<strong>' + (bon ? '✅ Exact !' : '❌ Pas tout à fait.') + '</strong> ' + item.e;
+    qzMajBarre();
+    const suiv = document.createElement('button');
+    suiv.className = 'btn';
+    suiv.style.marginTop = '12px';
+    suiv.textContent = (qzIdx + 1 >= qzOrdre.length) ? '🏁 Voir mon score' : 'Question suivante ▶';
+    suiv.addEventListener('click', function(){ qzIdx++; qzAffiche(); });
+    fb.appendChild(document.createElement('br'));
+    fb.appendChild(suiv);
+  }
+
+  function qzMajBarre(){
+    const total = QZ.length || 1;
+    const pct = Math.round(qzFait / total * 100);
+    document.getElementById('qzbar').style.width = pct + '%';
+    document.getElementById('qznote').textContent = qzFait + ' / ' + total + ' répondues · '
+      + qzBon + ' bonne' + (qzBon > 1 ? 's' : '') + ' réponse' + (qzBon > 1 ? 's' : '');
+  }
+
+  if (document.getElementById('qzbox')) qzRestart();
+
+  /* ════════ 4. SIMULATEUR D'ENTRETIEN ════════ */
+  const SIM = [
+    {c:"Motivation", q:"Pourquoi voulez-vous devenir directeur d'école ?", a:"Parle d'un déclencheur concret : « Dans mon école, j'ai vu que certains sujets n'avançaient que si quelqu'un les portait. Je veux être celui qui porte. » N'évoque jamais le confort ou l'absence de classe."},
+    {c:"Motivation", q:"Qu'est-ce qu'un directeur d'école ? Attention : pas un principal !", a:"Un professeur des écoles chargé de la direction. Autorité FONCTIONNELLE (il organise, coordonne, anime) mais PAS hiérarchique. Il est garant du fonctionnement, de la sécurité et des relations avec les familles."},
+    {c:"Motivation", q:"Quelle est la première qualité d'un directeur ?", a:"La fiabilité : faire ce qu'on annonce, tenir les délais, ne rien laisser sans réponse. Et la capacité à alerter quand la situation dépasse son champ."},
+    {c:"Réglementaire", q:"Que change la loi Rilhac ?", a:"Elle crée la fonction de directeur d'école et l'outille : autorité fonctionnelle, désignation d'un adjoint suppléant, intervention de partenaires extérieurs, protection juridique renforcée, et possibilité de limiter l'accès de l'école à une personne perturbatrice — en informant l'IEN."},
+    {c:"Réglementaire", q:"Autorité fonctionnelle ou hiérarchique ?", a:"Fonctionnelle. J'organise, je coordonne, je donne le cadre. Je n'évalue pas, je ne sanctionne pas un enseignant : pour ça, je saisis l'IEN."},
+    {c:"Réglementaire", q:"Que doit contenir le projet d'école ?", a:"Des objectifs, des actions concrètes, des indicateurs de réussite et un suivi. Sur 3 à 5 ans, adopté par le conseil d'école, évalué régulièrement."},
+    {c:"Réglementaire", q:"Différence entre conseil des maîtres et conseil d'école ?", a:"Le conseil des maîtres réunit les ENSEIGNANTS (au moins 1 fois par trimestre). Le conseil d'école réunit enseignants, parents élus, mairie et IEN (au moins 3 fois par an) — il adopte le projet d'école et le règlement."},
+    {c:"Situation", q:"L'électricité est coupée dans l'école. Que faites-vous ?", a:"Je rassure et je garde les élèves dans un lieu sûr et éclairé — on n'évacue pas dans le noir. J'appelle la MAIRIE (propriétaire du bâtiment) — si c'est une panne du quartier, je vérifie. J'informe l'IEN, je trace dans le registre de sécurité et je communique aux familles si ça dure."},
+    {c:"Situation", q:"Un parent arrive en colère et frappe un enseignant.", a:"Je fais cesser l'agression avec d'autres adultes, je mets les élèves à l'abri, j'appelle le 17, j'accompagne le collègue. Puis : information IMMÉDIATE de l'IEN, rapport écrit dans la journée, encouragement à porter plainte, déclaration d'accident de service, et application de la loi Rilhac pour limiter l'accès de l'agresseur."},
+    {c:"Situation", q:"Un parent se plaint : son enfant aurait été tapé par un enseignant.", a:"J'écoute sans juger dans un endroit isolé, je ne nie et ne confirme rien, je note les mots exacts. Je ne confronte JAMAIS l'enseignant et le parent. Je ne mène pas l'enquête : je trace et je transmets immédiatement à l'IEN. Si l'enfant est en danger : obligation de signalement. Et je protège les droits de l'enseignant (présomption d'innocence)."},
+    {c:"Situation", q:"Vous pensez qu'un élève est maltraité chez lui.", a:"J'observe et je note objectivement (faits, dates, mots exacts de l'enfant). Je n'interroge pas l'enfant, je ne préviens PAS la famille. Je signale : information préoccupante au CRIP + fiche au DASEN, ou 119/procureur si danger grave. Le secret professionnel ne s'y oppose pas — c'est même une obligation."},
+    {c:"Situation", q:"Un enseignant est absent et n'est pas remplacé.", a:"Je ne laisse JAMAIS d'élèves sans surveillance : je les regroupe dans un espace surveillé ou je les répartis. J'organise avec l'équipe (le directeur ou un collègue prend le groupe). J'informe l'IEN du dysfonctionnement, j'informe les familles si besoin et je trace."},
+    {c:"Situation", q:"Une personne inconnue rôde dans la cour.", a:"J'applique le PPMS « intrusion » : je fais rentrer les élèves, je ferme les accès, si nécessaire confinement (portes verrouillées, silence). J'appelle le 17 si nécessaire. J'informe l'IEN, je trace et je fais un débriefing avec l'équipe."},
+    {c:"Situation", q:"Un élève de CP a disparu à la sortie.", a:"Je fais chercher IMMÉDIATEMENT dans l'école (toutes les salles, sanitaires, cour). J'appelle la famille pour savoir si quelqu'un est venu. Si je ne le retrouve pas en quelques minutes : j'appelle le 17. J'informe l'IEN, je trace, et je revois l'organisation des sorties."},
+    {c:"Situation", q:"Une mère vous dit que son fils est harcelé.", a:"La priorité est la PROTECTION de la victime. J'écoute et je note les faits. Je reçois les élèves séparément, j'informe l'IEN, je réunis les familles séparément et je mets en place des mesures concrètes — pas des promesses. Programme pHARe. Je trace tout."},
+    {c:"Situation", q:"Deux enseignants se disputent violemment.", a:"Je mets fin à l'altercation, j'écoute chacun séparément, je tente la médiation. Si ça persiste, je SAISIS l'IEN : je n'ai pas d'autorité hiérarchique sur des collègues. Je trace les faits et les démarches."},
+    {c:"Situation", q:"Un élève handicapé arrive sans son AESH.", a:"L'élève est accueilli sans condition. J'aménage au mieux avec l'équipe et je signale l'absence d'AESH à l'IEN et au service compétent — une notification MDPH non appliquée, ça se signale. J'informe la famille des démarches faites."},
+    {c:"Situation", q:"Un parent crie et refuse de quitter l'école.", a:"Je mets les élèves à l'abri, je garde mon calme (pas d'escalade), j'appelle du renfort — jamais seul face à une personne menaçante. J'appelle le 17 si nécessaire. J'informe l'IEN et j'applique la loi Rilhac pour restreindre l'accès. Je trace les propos exacts avec témoins."},
+    {c:"Piège", q:"Un enseignant refuse de suivre une organisation que vous avez décidée.", a:"D'abord le dialogue en tête-à-tête : comprendre, rappeler le cadre, chercher une solution. S'il persiste : je saisis l'IEN, en ayant tracé les échanges. Ni sanction (je ne peux pas), ni conflit public."},
+    {c:"Piège", q:"Un parent refuse de venir chercher son enfant à la sortie.", a:"Je garde l'enfant en sécurité et j'appelle les personnes autorisées inscrites au dossier. Si personne ne vient en fin de service, j'appelle la gendarmerie si nécessaire, j'informe l'IEN et je trace. L'enfant ne reste jamais seul et ne part jamais avec une personne non autorisée."},
+    {c:"Piège", q:"Un parent vous dit : « Vous n'êtes pas capable de gérer l'école. »", a:"Je ne réponds pas à la provocation. Je reformule : « Qu'est-ce qui vous préoccupe concrètement ? » Je traite le problème factuel, je propose un rendez-vous posé, je trace. Si le ton devient menaçant, j'applique la procédure."},
+    {c:"Piège", q:"Un élève porte un signe religieux ostensible.", a:"Dialogue avec l'élève puis la famille : rappel de la loi de 2004 et de la Charte de la laïcité. Si refus persistant : note écrite et information de l'IEN. Jamais d'exclusion immédiate : la démarche est progressive et éducative."},
+    {c:"Piège", q:"Comment réagissez-vous si on vous annonce une inspection demain ?", a:"Sereinement : je sais que mon travail est tracé. Je prépare les documents clés (projet d'école, registre de sécurité, PPMS, comptes rendus de conseils), je prévins l'équipe et je me mets à disposition de l'inspecteur."},
+    {c:"Ouverture", q:"Quelles questions avez-vous à nous poser ?", a:"Prépare-en UNE, jamais zéro. Exemple : « Comment fonctionne le réseau des directeurs de la circonscription ? Un directeur débutant est-il accompagné ? » — ça montre que tu te projettes dans la fonction."},
+    {c:"Ouverture", q:"Êtes-vous prêt à exercer dans n'importe quelle école du département ?", a:"Oui, avec lucidité. J'ai exercé en REP+, en SEGPA, en maternelle, en élémentaire — je connais la diversité des contextes mahorais. Je m'adapterai au contexte de l'école où je serai nommé."}
+  ];
+
+  let simIdx = -1, simTemps = 120, simMinuterie = null;
+
+  function simNext(){
+    simIdx = Math.floor(Math.random() * SIM.length);
+    const it = SIM[simIdx];
+    document.getElementById('sim-cat').textContent = it.c;
+    document.getElementById('sim-q').textContent = it.q;
+    const hint = document.getElementById('sim-hint');
+    hint.className = 'hintit';
+    hint.innerHTML = '<strong>💡 Réponse attendue :</strong> ' + it.a;
+    document.getElementById('sim-aide').style.display = 'inline-block';
+    simTemps = 120;
+    simMajChrono();
+    simStopTimer();
+  }
+
+  function simMajChrono(){
+    const m = Math.floor(simTemps / 60);
+    const s = simTemps % 60;
+    document.getElementById('sim-timer').textContent = m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function simToggleTimer(){
+    if (simMinuterie){ simStopTimer(); return; }
+    document.getElementById('sim-start').textContent = '⏸️ Stop';
+    simMinuterie = setInterval(function(){
+      simTemps--;
+      if (simTemps <= 0){
+        simTemps = 0; simMajChrono(); simStopTimer();
+        document.getElementById('sim-timer').textContent = 'TEMPS ÉCOULÉ';
+        return;
+      }
+      simMajChrono();
+    }, 1000);
+  }
+
+  function simStopTimer(){
+    if (simMinuterie){ clearInterval(simMinuterie); simMinuterie = null; }
+    const b = document.getElementById('sim-start');
+    if (b) b.textContent = '⏱️ Démarrer le chrono';
+  }
+
+  function simAide(){
+    document.getElementById('sim-hint').classList.add('show');
+  }
+
+  /* ════════ 5. CHECKLISTS INTERACTIVES (mémorisées) ════════ */
+  (function checklists(){
+    const items = document.querySelectorAll('.chk li');
+    let memoire = {};
+    try { memoire = JSON.parse(localStorage.getItem('prepa_dir_chk') || '{}'); } catch(e){ memoire = {}; }
+    items.forEach(function(li, i){
+      const cle = 'c' + i + '_' + li.textContent.trim().slice(0, 40);
+      li.dataset.cle = cle;
+      if (memoire[cle]) li.classList.add('done');
+      li.addEventListener('click', function(){
+        li.classList.toggle('done');
+        memoire[cle] = li.classList.contains('done');
+        try { localStorage.setItem('prepa_dir_chk', JSON.stringify(memoire)); } catch(e){}
+      });
+    });
+  })();
+
+  /* ════════ 6. BOUTON IMPRIMER ════════ */
+  (function boutonImprimer(){
+    const bar = document.querySelector('.topbar');
+    if (!bar) return;
+    const b = document.createElement('button');
+    b.className = 'btn';
+    b.style.cssText = 'padding:5px 12px;font-size:.74rem;margin:0 6px 0 0;background:rgba(255,255,255,.15)';
+    b.textContent = '🖨️ Imprimer / PDF';
+    b.addEventListener('click', function(){ window.print(); });
+    const lien = bar.querySelector('a');
+    if (lien) bar.insertBefore(b, lien);
+  })();
 </script>
 </body>
 </html>
