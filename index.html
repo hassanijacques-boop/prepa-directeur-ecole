@@ -204,6 +204,49 @@
   .chk li.done{opacity:.55;text-decoration:line-through}
   .chk li.done::before{content:'☑';color:var(--vert)}
 
+  /* ── CARTE MENTALE DES 4 RÉFLEXES ── */
+  .mind{background:linear-gradient(165deg,#f5f8fd,#eaf2fc);border:1px solid var(--line);
+    border-radius:16px;padding:20px 14px 16px;margin:14px 0}
+  .mind-centre{max-width:360px;margin:0 auto;background:linear-gradient(140deg,var(--navy),#2a5c9e);
+    color:#fff;border-radius:16px;padding:17px 20px;text-align:center;
+    box-shadow:0 5px 18px rgba(18,41,77,.25);position:relative;z-index:2}
+  .mind-centre .t{font-size:1.14rem;font-weight:800;letter-spacing:.5px}
+  .mind-centre .s{font-size:.78rem;color:#b6d0f2;margin-top:4px;line-height:1.4}
+  .mind-tige{width:3px;height:20px;background:#b9cbe6;margin:0 auto}
+  .mind-hbar{height:3px;background:#b9cbe6;margin:0 12.5% ;border-radius:2px}
+  .mind-branches{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));
+    margin-top:0}
+  .br{background:#fff;border:1px solid var(--line);border-radius:13px;padding:0 0 14px;
+    position:relative;overflow:hidden;box-shadow:0 2px 7px rgba(18,41,77,.06)}
+  .br::before{content:'';position:absolute;top:-20px;left:50%;width:3px;height:20px;
+    background:#b9cbe6;transform:translateX(-50%)}
+  .br-head{padding:11px 14px;color:#fff;display:flex;align-items:center;gap:10px}
+  .br-head .n{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.25);
+    display:grid;place-items:center;font-weight:800;font-size:.82rem;flex-shrink:0}
+  .br-head b{font-size:.97rem;font-weight:800;letter-spacing:.3px}
+  .br-body{padding:12px 14px 0}
+  .br-body .lgt{font-size:.7rem;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
+    color:var(--muted);margin:9px 0 4px}
+  .br-body ul{margin:0 0 0 16px;font-size:.82rem}
+  .br-body li{margin-bottom:4px;line-height:1.45}
+  .br-body p{font-size:.82rem;margin:0}
+  .br-mot{background:#f4f8fd;border-left:3px solid;border-radius:7px;padding:8px 11px;
+    font-size:.8rem;font-style:italic;color:#2c3e56;margin-top:9px}
+  .br-err{font-size:.79rem;color:#a01d1d;background:#fdf1f0;border-radius:7px;
+    padding:7px 10px;margin-top:7px}
+  .br-err b{color:#8b1f1c}
+  .b1 .br-head{background:#c0392b} .b1 .br-mot{border-color:#c0392b}
+  .b2 .br-head{background:#d9820a} .b2 .br-mot{border-color:#d9820a}
+  .b3 .br-head{background:#2563eb} .b3 .br-mot{border-color:#2563eb}
+  .b4 .br-head{background:#1a7a4a} .b4 .br-mot{border-color:#1a7a4a}
+  .mind-boucle{text-align:center;margin-top:16px;font-size:.86rem;font-weight:800;
+    color:var(--navy);background:#fff;border:2px dashed #b9cbe6;border-radius:12px;padding:11px}
+  @media(max-width:760px){
+    .mind-hbar{display:none}
+    .br::before{display:none}
+    .mind-tige{margin-bottom:6px}
+  }
+
   /* ── IMPRESSION ── */
   @media print{
     .topbar,.sidebar,.btn,.simu,.qz,.cd-wrap{display:none !important}
@@ -248,7 +291,7 @@
     </div>
 
     <div class="stats">
-      <div><b>19</b>sections</div>
+      <div><b>20</b>sections</div>
       <div><b>12</b>cas d'urgence</div>
       <div><b>30</b>questions et cas</div>
       <div><b>3</b>textes officiels</div>
@@ -281,6 +324,7 @@
       <a href="#lexique"><span class="n">17</span> 📇 Le lexique des sigles</a>
       <a href="#quiz"><span class="n">18</span> 🎯 Quiz d'auto-évaluation</a>
       <a href="#simulateur"><span class="n">19</span> 🎤 Simulateur d'entretien</a>
+      <a href="#carte"><span class="n">20</span> 🧭 La carte mentale des 4 réflexes</a>
     </nav>
   </aside>
 
@@ -1677,6 +1721,13 @@
         (violence, danger pour un enfant, menace), le directeur <strong>informe sa hiérarchie</strong>.
         Ce n'est pas un aveu de faiblesse : c'est <strong>exactement</strong> ce qu'on attend de lui.</p>
     </div>
+
+    <div class="callout ok" style="background:#f3f0ff;border-color:#7c3aed">
+      <div class="ct" style="color:#5b21b6">🧭 À VOIR AUSSI — la carte mentale</div>
+      <p>J'ai fait une <strong>carte mentale visuelle</strong> de ces 4 réflexes, avec les mots-clés
+        et l'erreur à éviter pour chacun : <a href="#carte"><strong>voir la section 20 →</strong></a>
+        <em>(imprimable, à coller au-dessus de ton bureau)</em></p>
+    </div>
   </section>
 
   <!-- ══════════ 5. SITUATIONS D'URGENCE ══════════ -->
@@ -2866,6 +2917,145 @@
         <li>Utilise <strong>toujours les 4 réflexes</strong> : je sécurise, j'alerte, je trace, je protège.</li>
         <li>Demande à quelqu'un de te poser les questions — <strong>sans regarder la réponse.</strong></li>
       </ol>
+    </div>
+  </section>
+
+  <!-- ══════════ 20. CARTE MENTALE ══════════ -->
+  <section id="carte">
+    <div class="kicker">Section 20 — À mémoriser d'un coup d'œil</div>
+    <h2>🧭 La carte mentale des 4 réflexes</h2>
+    <p>Imprime cette page et colle-la au-dessus de ton bureau. Si tu ne retiens <strong>qu'une seule
+      chose</strong> du site, c'est celle-là. 👇</p>
+
+    <div class="mind">
+      <div class="mind-centre">
+        <div class="t">🧭 LES 4 RÉFLEXES</div>
+        <div class="s">Dans cet ordre, à chaque fois —<br>et on recommence si la situation l'exige</div>
+      </div>
+      <div class="mind-tige"></div>
+      <div class="mind-hbar"></div>
+      <div class="mind-branches">
+
+        <div class="br b1">
+          <div class="br-head"><span class="n">1</span><b>SÉCURISER</b></div>
+          <div class="br-body">
+            <div class="lgt">Qui, quoi ?</div>
+            <ul>
+              <li>Les <strong>élèves</strong> d'abord, puis les adultes</li>
+              <li>Mettre à l'abri, éloigner le danger, soigner</li>
+              <li>Ne pas déplacer un blessé</li>
+            </ul>
+            <div class="lgt">Les mots-clés</div>
+            <p>« Je mets à l'abri. » · « J'éloigne. » · « Je rappelle le calme. »</p>
+            <div class="br-mot">« On ne raisonne pas d'abord, on protège d'abord. »</div>
+            <div class="br-err"><b>🚫 L'erreur :</b> chercher à comprendre la situation <em>avant</em> de mettre les personnes en sécurité.</div>
+          </div>
+        </div>
+
+        <div class="br b2">
+          <div class="br-head"><span class="n">2</span><b>ALERTER</b></div>
+          <div class="br-body">
+            <div class="lgt">Qui appeler ?</div>
+            <ul>
+              <li><strong>15 / 17 / 18</strong> → urgence vitale</li>
+              <li><strong>119</strong> → enfance en danger</li>
+              <li><strong>IEN</strong> → toujours (il est ton supérieur)</li>
+              <li><strong>Mairie</strong> → bâtiment, cantine</li>
+              <li><strong>DASEN</strong> → les cas graves</li>
+            </ul>
+            <div class="br-mot">« Je n'informe jamais mon inspecteur trop tôt — je l'informe <em>systématiquement</em>. »</div>
+            <div class="br-err"><b>🚫 L'erreur :</b> attendre, minimiser, ou vouloir régler seul une situation qui te dépasse.</div>
+          </div>
+        </div>
+
+        <div class="br b3">
+          <div class="br-head"><span class="n">3</span><b>TRACER</b></div>
+          <div class="br-body">
+            <div class="lgt">Quoi écrire ?</div>
+            <ul>
+              <li>Des <strong>faits</strong>, jamais d'interprétation</li>
+              <li>Les <strong>mots exacts</strong> (entre guillemets)</li>
+              <li>Qui · quoi · quand · où · combien de fois</li>
+              <li>Les <strong>témoins</strong> et les démarches faites</li>
+            </ul>
+            <div class="lgt">Combien de temps après ?</div>
+            <p><strong>Le jour même.</strong> Toujours.</p>
+            <div class="br-mot">« Ce qui n'est pas écrit n'existe pas. »</div>
+            <div class="br-err"><b>🚫 L'erreur :</b> garder les choses en tête en se disant qu'on s'en souviendra.</div>
+          </div>
+        </div>
+
+        <div class="br b4">
+          <div class="br-head"><span class="n">4</span><b>PROTÉGER</b></div>
+          <div class="br-body">
+            <div class="lgt">Qui protéger ?</div>
+            <ul>
+              <li>Les <strong>droits de chacun</strong> : élèves <em>et</em> adultes</li>
+              <li>La <strong>protection juridique</strong> de l'État (pour toi)</li>
+              <li>La <strong>présomption d'innocence</strong> d'un collègue mis en cause</li>
+              <li>La <strong>confidentialité</strong> des familles</li>
+            </ul>
+            <div class="br-mot">« Signaler, ce n'est pas se couvrir : c'est se protéger <em>et</em> couvrir son école. »</div>
+            <div class="br-err"><b>🚫 L'erreur :</b> tout raconter à tout le monde, ou au contraire tout garder pour soi.</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="mind-boucle">🔄 Et si la situation n'est pas réglée → <strong>on reprend au 1</strong></div>
+    </div>
+
+    <h3><span class="ico">🎯</span> Comment ça s'applique aux cas du jury</h3>
+    <p>Regarde comme les <strong>12 cas d'urgence</strong> se plient toujours à la même structure :</p>
+    <table>
+      <tr><th>Cas</th><th>1. Sécuriser</th><th>2. Alerter</th><th>3. Tracer</th><th>4. Protéger</th></tr>
+      <tr>
+        <td><strong>Coupure d'électricité</strong></td>
+        <td>Garder les élèves dans un lieu sûr (pas d'évacuation dans le noir)</td>
+        <td>Mairie (bâtiment) + IEN</td>
+        <td>Registre de sécurité</td>
+        <td>Communiquer aux familles</td>
+      </tr>
+      <tr>
+        <td><strong>Parent violent</strong></td>
+        <td>Faire cesser l'agression + élèves à l'abri</td>
+        <td>17 + IEN</td>
+        <td>Rapport le jour même</td>
+        <td>Accident de service + protection juridique + loi Rilhac</td>
+      </tr>
+      <tr>
+        <td><strong>Accusation sur un enseignant</strong></td>
+        <td>Écouter le parent sans juger</td>
+        <td><strong>IEN sans délai</strong></td>
+        <td>Mots exacts du parent + date</td>
+        <td>Présomption d'innocence + confidentialité</td>
+      </tr>
+      <tr>
+        <td><strong>Enfant en danger</strong></td>
+        <td>Accueillir, observer, ne pas renvoyer si danger</td>
+        <td>119 / CRIP + DASEN</td>
+        <td>Faits objectifs + mots de l'enfant</td>
+        <td>Ne pas prévenir la famille + secret professionnel levé</td>
+      </tr>
+      <tr>
+        <td><strong>Élève blessé</strong></td>
+        <td>Ne pas déplacer + soigner</td>
+        <td>15 si besoin + famille</td>
+        <td>Déclaration d'accident sous 48 h</td>
+        <td>Couverture assurance de l'élève</td>
+      </tr>
+    </table>
+
+    <div class="callout ok">
+      <div class="ct">✅ La phrase à réciter le jour J</div>
+      <p style="font-size:1.02rem;font-weight:700;color:var(--navy);text-align:center;line-height:1.6">
+        « Je <strong>sécurise</strong> les personnes, j'<strong>alerte</strong> le bon interlocuteur,
+        je <strong>trace</strong> par écrit, et je <strong>protège</strong> les droits de chacun.
+        Et je ne reste jamais seul. »
+      </p>
+    </div>
+
+    <div style="text-align:center;margin-top:16px">
+      <button class="btn" onclick="window.print()">🖨️ Imprimer la carte mentale</button>
     </div>
   </section>
 
