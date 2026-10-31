@@ -228,7 +228,7 @@ POCHE = """
     <div class="pk-t">6. Mes 3 questions à lui poser</div>
     <p>1. Les difficultés les plus fréquentes des <b>directeurs débutants</b> ?<br>
     2. Comment <b>accompagnez-vous</b> un directeur qui prend sa première fonction ?<br>
-    3. Votre regard sur le suivi des <b>AESS / élèves à besoins particuliers</b> ?</p>
+    3. Votre regard sur le suivi des <b>AESH / élèves à besoins particuliers</b> ?</p>
   </div>
 
   <div class="pk rouge-fond">
@@ -288,11 +288,11 @@ body { font-family: "DejaVu Sans", Arial, sans-serif; color: #1c2331; margin: 0;
   border-top: 1px dashed #cbd5e1; padding-top: 6px; }
 
 /* ── fiche de poche ── */
-.poche .pk { border: 1px solid #e2e8f0; border-left: 4px solid #2563eb; border-radius: 9px;
-  padding: 8px 12px; margin-bottom: 7px; background: #fbfcfe; }
-.poche .pk-t { font-size: .68rem; font-weight: 800; letter-spacing: .6px; color: #2563eb;
+.poche .pk { border: 1px solid #e2e8f0; border-left: 5px solid #2563eb; border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 12px; background: #fbfcfe; }
+.poche .pk-t { font-size: .8rem; font-weight: 800; letter-spacing: .6px; color: #2563eb;
   text-transform: uppercase; margin-bottom: 3px; }
-.poche .pk p { margin: 0; font-size: .78rem; line-height: 1.5; }
+.poche .pk p { margin: 0; font-size: .95rem; line-height: 1.62; }
 .poche .pk p.fill { color: #5b6779; letter-spacing: .5px; }
 .poche .rouge-fond { border-left-color: #c0392b; background: #fef2f2; }
 .poche .rouge-fond .pk-t { color: #c0392b; }
