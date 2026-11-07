@@ -370,6 +370,122 @@
   .pi-jours .j{display:flex;gap:12px;background:#fbfcfe;border:1px solid var(--line);border-radius:10px;padding:12px 15px}
   .pi-jours .j .d{flex:0 0 82px;font-weight:800;font-size:.8rem;color:var(--bleu);text-transform:uppercase}
   .pi-jours .j .c{flex:1;font-size:.88rem;line-height:1.6}
+
+  /* ════════ SECTION 22 — LAÏCITÉ ════════ */
+  #laicite h3.lz { font-size: .86rem; color: #2563eb; letter-spacing: .5px;
+    text-transform: uppercase; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px;
+    margin: 20px 0 9px; page-break-after: avoid; }
+  #laicite .qr { cursor: pointer; transition: .15s; }
+  #laicite .qr:hover { border-color: #93c5fd; }
+  #laicite .qr .rep, #laicite .qr ul, #laicite .qr .conf,
+  #laicite .qr .txtx, #laicite .qr .lab { display: none; }
+  #laicite .qr.open .rep, #laicite .qr.open .lab,
+  #laicite .qr.open ul, #laicite .qr.open .conf,
+  #laicite .qr.open .txtx { display: block; }
+  #laicite .qr-hint { font-size: .72rem; font-weight: 700; color: #2563eb;
+    margin-top: 2px; }
+  #laicite .qr.open .qr-hint { display: none; }
+  #laicite .lz-barre { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 14px; }
+  #laicite .lz-barre button { border: none; border-radius: 9px; padding: 9px 15px;
+    font-weight: 800; font-size: .83rem; cursor: pointer; font-family: inherit;
+    background: #12294d; color: #fff; }
+  #laicite .lz-barre button.alt { background: #eef2f7; color: #12294d; }
+
+#laicite { font-family: "DejaVu Sans", Arial, sans-serif; color: #1c2331; margin: 0;
+  font-size: 9.5pt; line-height: 1.48; }
+#laicite .cov { border-bottom: 3px solid #12294d; padding-bottom: 10px; margin-bottom: 14px; }
+#laicite .tagc { display: inline-block; background: #12294d; color: #fff; font-size: .64rem; font-weight: 800;
+  letter-spacing: .9px; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; margin-bottom: 7px; }
+#laicite h1 { font-size: 1.34rem; color: #12294d; margin: 0 0 3px; }
+#laicite .sub { color: #5b6779; font-size: .8rem; margin: 0; }
+#laicite h2 { font-size: .86rem; color: #12294d; letter-spacing: .5px; text-transform: uppercase;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin: 16px 0 9px; page-break-after: avoid; }
+#laicite h3 { font-size: .78rem; letter-spacing: .6px; text-transform: uppercase; margin: 12px 0 6px;
+  page-break-after: avoid; }
+#laicite .alerte { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #c0392b;
+  border-radius: 9px; padding: 11px 14px; font-size: .87rem; margin-bottom: 12px; color: #7f1d1d; }
+#laicite .info { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #2563eb;
+  border-radius: 9px; padding: 11px 14px; font-size: .87rem; margin: 11px 0; }
+#laicite .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 11px 0; page-break-inside: avoid; }
+#laicite .pc { border: 1px solid #e2e8f0; border-top: 4px solid var(--c); border-radius: 10px; padding: 9px 11px; background: #fff; }
+#laicite .pc .t { font-size: .72rem; font-weight: 800; letter-spacing: .6px; color: var(--c); margin-bottom: 6px; }
+#laicite .pc .a { font-size: .82rem; font-weight: 700; color: #12294d; margin-bottom: 5px; line-height: 1.4; }
+#laicite .pc .b { font-size: .79rem; color: #475569; line-height: 1.5; margin-bottom: 6px; }
+#laicite .pc .d { font-size: .74rem; font-style: italic; color: #1e3a8a; background: #f8fafc;
+  border-radius: 6px; padding: 6px 8px; }
+#laicite .pt { border: 1px solid #e2e8f0; border-left: 5px solid var(--c); border-radius: 11px;
+  padding: 12px 15px; margin-bottom: 10px; page-break-inside: avoid; background: #fff; }
+#laicite .pt .h { display: flex; align-items: baseline; gap: 9px; margin-bottom: 3px; }
+#laicite .pt .h .t { font-size: .88rem; font-weight: 800; color: var(--c); }
+#laicite .pt .h .s { font-size: .74rem; color: #5b6779; font-style: italic; }
+#laicite .pt ul { margin: 6px 0 7px; padding-left: 17px; font-size: .84rem; }
+#laicite .pt ul li { margin-bottom: 4px; }
+#laicite .pt .ph { background: #fffbeb; border-left: 3px solid #b8860b; border-radius: 6px;
+  padding: 7px 10px; font-size: .83rem; color: #422006; }
+#laicite table { width: 100%; border-collapse: collapse; font-size: .78rem; margin: 8px 0; }
+#laicite th { background: #12294d; color: #fff; padding: 6px 7px; text-align: left; font-size: .67rem;
+  text-transform: uppercase; letter-spacing: .4px; }
+#laicite td { border-bottom: 1px solid #e2e8f0; padding: 6px 7px; vertical-align: top; }
+#laicite tr { page-break-inside: avoid; }
+#laicite tbody tr:nth-child(even) td, #laicite table tr:nth-child(even) td { background: #fbfcfe; }
+#laicite .gest { display: grid; gap: 7px; margin: 9px 0; }
+#laicite .gest .g { display: flex; gap: 10px; background: #fbfcfe; border: 1px solid #e2e8f0;
+  border-radius: 9px; padding: 8px 12px; font-size: .83rem; page-break-inside: avoid; }
+#laicite .gest .g .n { flex: 0 0 20px; height: 20px; border-radius: 50%; background: #2563eb; color: #fff;
+  font-weight: 800; font-size: .7rem; display: flex; align-items: center; justify-content: center; }
+#laicite .gest .g .c b { color: #12294d; }
+#laicite .gest .g .w { font-size: .77rem; color: #92400e; }
+#laicite .erreur { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 11px 14px; }
+#laicite .erreur p { margin: 0 0 7px; font-size: .84rem; }
+#laicite .erreur p:last-child { margin: 0; }
+#laicite .erreur .x { color: #991b1b; font-weight: 800; }
+#laicite .erreur .v { color: #166534; }
+#laicite .txt { display: grid; gap: 7px; margin: 9px 0; }
+#laicite .txt .i { background: #f8fafc; border-left: 3px solid #12294d; border-radius: 7px;
+  padding: 8px 12px; font-size: .81rem; page-break-inside: avoid; }
+#laicite .txt .i b.n { color: #12294d; display: block; margin-bottom: 2px; }
+#laicite .fin { background: #12294d; color: #fff; border-radius: 12px; padding: 15px 18px; margin-top: 14px; }
+#laicite .fin h3 { color: #fbbf24; margin: 0 0 8px; }
+#laicite .fin p { margin: 0 0 7px; font-size: .85rem; line-height: 1.55; }
+#laicite .fin b { color: #93c5fd; }
+#laicite { font-family: "DejaVu Sans", Arial, sans-serif; color: #1c2331; margin: 0;
+  font-size: 9.4pt; line-height: 1.46; }
+#laicite .cov { border-bottom: 3px solid #12294d; padding-bottom: 9px; margin-bottom: 12px; }
+#laicite .tagc { display: inline-block; background: #c0392b; color: #fff; font-size: .63rem; font-weight: 800;
+  letter-spacing: .9px; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; margin-bottom: 6px; }
+#laicite h1 { font-size: 1.3rem; color: #12294d; margin: 0 0 3px; }
+#laicite .sub { color: #5b6779; font-size: .79rem; margin: 0; }
+#laicite h2 { font-size: .8rem; letter-spacing: .7px; text-transform: uppercase;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 4px; margin: 15px 0 8px; page-break-after: avoid; }
+#laicite table { width: 100%; border-collapse: collapse; font-size: .76rem; margin: 8px 0 4px; }
+#laicite th { background: #12294d; color: #fff; padding: 6px 7px; text-align: left; font-size: .65rem;
+  text-transform: uppercase; letter-spacing: .4px; }
+#laicite td { border-bottom: 1px solid #e2e8f0; padding: 5px 7px; vertical-align: top; }
+#laicite tr { page-break-inside: avoid; }
+#laicite .qr { border: 1px solid #e2e8f0; border-left: 5px solid var(--c); border-radius: 10px;
+  padding: 10px 13px; margin-bottom: 9px; background: #fff; page-break-inside: avoid; }
+#laicite .qh { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 6px; }
+#laicite .qn { flex: 0 0 21px; height: 21px; border-radius: 50%; background: var(--c); color: #fff;
+  font-weight: 800; font-size: .68rem; display: flex; align-items: center; justify-content: center; }
+#laicite .qt { flex: 1; font-size: .88rem; font-weight: 700; color: #12294d; line-height: 1.35; }
+#laicite .rep { font-size: .83rem; background: #f8fafc; border-radius: 7px; padding: 7px 10px; margin-bottom: 7px; }
+#laicite .lab { font-size: .64rem; font-weight: 800; letter-spacing: .7px; text-transform: uppercase;
+  color: var(--c); margin-bottom: 3px; }
+#laicite ul { margin: 0 0 7px; padding-left: 17px; font-size: .81rem; }
+#laicite ul li { margin-bottom: 3px; }
+#laicite .conf { background: #fef2f2; border-left: 3px solid #c0392b; border-radius: 6px;
+  padding: 6px 10px; font-size: .79rem; color: #7f1d1d; }
+#laicite .conf .cl { display: block; font-size: .64rem; letter-spacing: .6px; text-transform: uppercase;
+  color: #c0392b; margin-bottom: 3px; }
+#laicite .txtx { font-size: .73rem; color: #5b6779; margin-top: 6px; font-style: italic; }
+#laicite .txtx b { color: #12294d; font-style: normal; }
+#laicite .intro { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #2563eb;
+  border-radius: 9px; padding: 11px 14px; font-size: .85rem; margin: 10px 0 12px; }
+#laicite .intro b { color: #12294d; }
+#laicite .fin { background: #12294d; color: #fff; border-radius: 11px; padding: 14px 17px; margin-top: 12px; }
+#laicite .fin h3 { color: #fbbf24; margin: 0 0 7px; font-size: .8rem; letter-spacing: .6px; text-transform: uppercase; }
+#laicite .fin p { margin: 0 0 6px; font-size: .84rem; line-height: 1.5; }
+#laicite .fin b { color: #93c5fd; }
 </style>
 </head>
 <body>
@@ -436,8 +552,9 @@
       <a href="#simulateur"><span class="n">19</span> 🎤 Simulateur d'entretien</a>
       <a href="#oral"><span class="n">20</span> 🗣️ Se présenter &amp; simulation complète</a>
       <a href="#preliminaire"><span class="n">21</span> 🤝 L'entretien préliminaire avec l'IEN</a>
-      <a href="#carte"><span class="n">22</span> 🧭 La carte mentale des 4 réflexes</a>
-      <a href="#textes"><span class="n">23</span> 📚 Textes officiels &amp; liens directs</a>
+      <a href="#laicite"><span class="n">22</span> 🕊️ Laïcité et neutralité</a>
+      <a href="#carte"><span class="n">23</span> 🧭 La carte mentale des 4 réflexes</a>
+      <a href="#textes"><span class="n">24</span> 📚 Textes officiels &amp; liens directs</a>
     </nav>
   </aside>
 
@@ -3680,7 +3797,114 @@
     </div>
   </section>
 
-  <!-- ══════════ 23. TEXTES OFFICIELS ══════════ -->
+
+  <!-- ══════════ 22. LAÏCITÉ ET NEUTRALITÉ ══════════ -->
+  <section id="laicite">
+    <div class="kicker">Section 22 — La question la plus sensible de l'entretien</div>
+    <h2>🕊️ Laïcité et neutralité — le briefing et les 20 cas concrets</h2>
+
+    <div class="callout" style="border-color:var(--rouge);background:#fef2f2">
+      <strong>⚠️ La distinction qui gouverne tout</strong><br>
+      <strong>Les élèves</strong> relèvent de la <strong>loi de 2004</strong> : seuls les signes <strong>ostensibles</strong> sont interdits.<br>
+      <strong>Les adultes de l'école</strong> relèvent de la <strong>neutralité des agents publics</strong> : <strong>aucun signe</strong>, sans exception.<br>
+      <strong>Les parents</strong> ne relèvent d'<strong>aucune</strong> interdiction : ce sont des usagers.<br><br>
+      <strong>Confondre ces trois régimes, c'est la faute la plus fréquente — et celle qui fait le plus de dégâts.</strong>
+    </div>
+
+    
+
+
+
+<div class="alerte">
+  <b>⚠️ Pourquoi l'inspecteur pose cette question — et pourquoi c'est piégeux</b><br>
+  Le directeur est <b>le garant de la laïcité dans son école</b>. En posant cette question, il vérifie
+  trois choses : que tu <b>connais le cadre</b>, que tu sais <b>le faire appliquer sans brutalité</b>,
+  et que tu ne confonds pas <b>laïcité</b> avec <b>hostilité au religieux</b>.<br><br>
+  <b>L'erreur classique :</b> répondre uniquement par des interdictions. Un directeur qui ne parle
+  que d'interdiction n'a pas compris le métier.
+</div>
+
+<h3 class='lz'>① Les 3 principes de la laïcité</h3>
+<div class="g3"><div class="pc" style="--c:#2563eb"><div class="t">1. LA NEUTRALITÉ</div><div class="a">L'État et ses agents ne prennent parti pour aucune croyance, aucune opinion.</div><div class="b">L'enseignant ne manifeste pas ses convictions religieuses, politiques ou philosophiques.</div><div class="d">« L'école publique est neutre : elle n'annonce aucune vérité, elle apprend à en chercher une. »</div></div><div class="pc" style="--c:#1a7a4a"><div class="t">2. LA LIBERTÉ DE CONSCIENCE</div><div class="a">Chacun est libre de croire ou de ne pas croire. L'école ne force aucune adhésion.</div><div class="b">Un élève ne peut pas être noté, jugé ou écarté selon sa religion — ni selon son absence de religion.</div><div class="d">« Mon rôle n'est pas de dire ce qu'il faut croire, mais de garantir que chacun puisse apprendre sans renier ce qu'il est. »</div></div><div class="pc" style="--c:#b8860b"><div class="t">3. L'ÉGALITÉ</div><div class="a">Tous les élèves sont traités de la même façon, sans distinction d'origine ni de religion.</div><div class="b">Aucun traitement de faveur, aucun traitement défavorable.</div><div class="d">« La même règle pour tous, appliquée de la même façon à tous. »</div></div></div>
+
+<h3 class='lz'>② Les 3 points de la neutralité de l'enseignant</h3>
+<div class="info">
+  <b>C'est très probablement ce que l'inspecteur a appelé « les 3 points ».</b>
+  La neutralité ne se réduit pas aux signes : elle porte sur <b>ce que je dis</b>, <b>ce que j'enseigne</b>
+  et <b>ce que je fais</b>. Si tes notes disaient plutôt « neutralité / liberté de conscience / égalité »,
+  ce sont les 3 principes ci-dessus — deux triades justes, deux questions différentes.
+</div>
+<div class="pt" style="--c:#2563eb"><div class="h"><span class="t">① LA NEUTRALITÉ DES OPINIONS</span><span class="s">Ce que je montre, ce que je dis</span></div><ul><li>Je ne portais pas de signe d'appartenance religieuse, politique ou syndicale.</li><li>Je n'affiche pas mes convictions : ni dans mes mots, ni sur mes vêtements, ni sur mes affaires.</li><li>Je ne réponds pas « et vous, qu'est-ce que vous en pensez ? » quand un élève m'interroge sur mes croyances.</li><li>Je peux dire : « Ma conviction personnelle ne compte pas ici. Ce qui compte, c'est ce que tu apprends. »</li></ul><div class="ph">💬 « Mes opinions m'appartiennent et restent à la porte de la classe. »</div></div><div class="pt" style="--c:#1a7a4a"><div class="h"><span class="t">② LA NEUTRALITÉ DE L'ENSEIGNEMENT</span><span class="s">Ce que j'enseigne, et comment</span></div><ul><li>Le contenu est celui des programmes : il est <b>laïque, objectif et exigeant</b>.</li><li><b>Aucun prosélytisme</b> : je ne cherche à convaincre personne d'adhérer à quoi que ce soit.</li><li>Le <b>fait religieux</b> s'enseigne comme un fait : en histoire, en français, en arts — <b>jamais comme une vérité</b>.</li><li>Je développe l'<b>esprit critique</b> : apprendre à douter, vérifier, argumenter.</li></ul><div class="ph">💬 « J'enseigne des savoirs, pas des croyances. Et le fait religieux s'explique, il ne se prêche pas. »</div></div><div class="pt" style="--c:#b8860b"><div class="h"><span class="t">③ LA NEUTRALITÉ DU COMPORTEMENT</span><span class="s">Ce que je fais, dans les faits</span></div><ul><li>Je traite <b>tous les élèves de la même façon</b> : ni faveur, ni sévérité particulière.</li><li>Je ne fais <b>aucune remarque</b> sur la religion supposée d'un élève ou de sa famille.</li><li>Je <b>protège</b> un élève moqué pour ses croyances — ou pour son absence de croyance.</li><li>Je <b>ne confonds pas</b> laïcité et hostilité au religieux : un élève croyant n'est pas un problème.</li></ul><div class="ph">💬 « Le risque, ce n'est pas le croyant : c'est le traitement inégal. C'est ça que je surveille. »</div></div>
+
+<h3 class='lz'>③ Qui est soumis à quoi</h3>
+<table>
+  <tr><th style="width:19%">Qui</th><th style="width:20%">Statut</th><th>Obligation</th><th style="width:15%">Neutr.&nbsp;?</th><th style="width:22%">Fondement</th></tr>
+  <tr><td><b>Enseignants</b></td><td>Agents publics de l'État</td><td>Neutralité <b>totale</b> : aucune manifestation de convictions</td><td>✅ Oui</td><td><span style="font-size:.72rem;color:#5b6779">Statut général de la fonction publique + déontologie</span></td></tr><tr><td><b>Le directeur</b></td><td>Agent public + responsable de l'école</td><td>Neutralité <b>+ garantie</b> : il fait respecter la laïcité dans toute l'école</td><td>✅ Oui, renforcée</td><td><span style="font-size:.72rem;color:#5b6779">Loi Rilhac + code de l'éducation</span></td></tr><tr><td><b>Les élèves</b></td><td>Usagers du service public</td><td>Loi de 2004 : <b>signes religieux ostensibles interdits</b> à l'école publique</td><td>⚠️ Différent</td><td><span style="font-size:.72rem;color:#5b6779">Loi du 15 mars 2004</span></td></tr><tr><td><b>Les AESH</b></td><td>Agents publics (contractuels de droit public)</td><td>Neutralité : <b>même obligation que les enseignants</b></td><td>✅ Oui</td><td><span style="font-size:.72rem;color:#5b6779">Statut + contrat</span></td></tr><tr><td><b>Les parents</b></td><td>Usagers</td><td>Pas de neutralité — mais <b>pas de trouble</b> à l'ordre scolaire</td><td>❌ Non, mais…</td><td><span style="font-size:.72rem;color:#5b6779">Règlement intérieur</span></td></tr><tr><td><b>Intervenants extérieurs</b></td><td>Prestataires</td><td>Neutralité <b>imposée par le contrat</b> et la charte signée</td><td>✅ Oui</td><td><span style="font-size:.72rem;color:#5b6779">Contrat + charte d'intervention</span></td></tr><tr><td><b>Accompagnateurs bénévoles</b></td><td>Bénévoles, pas agents</td><td>Pas de neutralité — mais <b>discrétion</b> et pas de prosélytisme</td><td>⚠️ Atténuée</td><td><span style="font-size:.72rem;color:#5b6779">Charte des bénévoles</span></td></tr>
+</table>
+
+<h3 class='lz'>④ Ce que fait le directeur — 5 gestes</h3>
+<div class="gest"><div class="g"><div class="n">1</div><div class="c"><b>Rappeler le cadre</b> — À la rentrée, en conseil des maîtres, en réunion de parents. La <b>Charte de la laïcité</b> est affichée dans l'école.<div class="w">→ Le cadre se rappelle <b>avant</b> l'incident, pas pendant.</div></div></div><div class="g"><div class="n">2</div><div class="c"><b>Recueillir les faits</b> — Qui, quoi, quand, où, devant qui. Des faits, <b>pas des impressions</b>. Par écrit.<div class="w">→ On ne tranche jamais sur un ouï-dire.</div></div></div><div class="g"><div class="n">3</div><div class="c"><b>Dialoguer</b> — Avec l'élève seul, puis avec la famille. <b>Expliquer la règle</b>, écouter ce qui bloque.<div class="w">→ Un entretien calme désarme plus qu'une sanction.</div></div></div><div class="g"><div class="n">4</div><div class="c"><b>Tracer et saisir</b> — Écrire l'incident, la réponse apportée. Saisir l'<b>IEN</b> si la situation dépasse l'école.<div class="w">→ Ce qui n'est pas écrit n'existe pas.</div></div></div><div class="g"><div class="n">5</div><div class="c"><b>Faire vivre la laïcité</b> — Ne pas la réduire à des interdits : <b>EMC</b>, enseignement du fait religieux, débats réglés, conseils d'élèves.<div class="w">→ ⚠️ C'est le point qui distingue un directeur d'un gardien.</div></div></div></div>
+
+<h3 class='lz'>⑤ 8 situations à traiter</h3>
+<table>
+  <tr><th style="width:26%">La situation</th><th>Ce que tu fais</th><th style="width:22%">Ce qu'il ne faut pas faire</th></tr>
+  <tr><td><b>Un élève de CM2 arrive avec un signe religieux ostensible</b></td><td>Entretien <b>individuel et calme</b>. J'explique la règle (loi de 2004) et je propose un <b>temps pour l'enlever</b>, sans humiliation. J'appelle la famille le jour même. Je note. Si le refus persiste : <b>IEN</b>.</td><td style="color:#991b1b">Lui arracher ou l'exclure devant la classe</td></tr><tr><td><b>Un parent demande que son enfant soit dispensé d'un cours (natation, éducation à la sexualité, sortie)</b></td><td>Distinguer : la <b>dispense n'est pas un droit général</b>. On écoute la demande, on explique l'obligation scolaire, on cherche ce qui pose problème. Certaines dispenses existent (ex. éducation à la sexualité : <b>droit de retrait</b> prévu par les textes) — je vérifie avant de répondre.</td><td style="color:#991b1b">Répondre « oui » ou « non » sans vérifier le texte</td></tr><tr><td><b>Une AESH porte un signe religieux</b></td><td>Elle est <b>soumise à la neutralité</b> comme tout agent public. Le directeur lui en parle <b>en premier</b>, seul, avec respect. Si ça persiste, l'employeur (l'État) est saisi.</td><td style="color:#991b1b">Laisser passer en disant « ce n'est pas mon personnel »</td></tr><tr><td><b>Un intervenant extérieur (sport, musique) fait du prosélytisme</b></td><td>Je <b>mets fin à l'activité</b> immédiatement, je le signale à l'IEN et à l'organisme. La charte signée est opposable.</td><td style="color:#991b1b">Attendre la fin du cycle pour ne pas déranger</td></tr><tr><td><b>Un enseignant donne son opinion politique en classe</b></td><td>Je lui parle <b>en tête-à-tête</b>, sans le mettre en difficulté devant les élèves. S'il récidive, <b>IEN</b> — car je n'ai pas de pouvoir disciplinaire.</td><td style="color:#991b1b">Le reprendre devant la classe</td></tr><tr><td><b>Une famille demande un menu confessionnel à la cantine</b></td><td>La restauration relève de la <b>mairie</b>. Le directeur peut transmettre, pas décider. Posture : « je transmets à la commune, mais l'école ne gère pas les menus ».</td><td style="color:#991b1b">Promettre un menu que l'école ne peut pas fournir</td></tr><tr><td><b>Un élève refuse de serrer la main d'une enseignante</b></td><td>J'interroge avant d'accuser. Si c'est pour un motif religieux, j'explique la règle du <b>vivre ensemble</b> et je propose une alternative (salutation verbale). Je note.</td><td style="color:#991b1b">Y voir immédiatement une provocation</td></tr><tr><td><b>Des élèves se moquent d'un camarade pour sa religion (ou son athéisme)</b></td><td>C'est un <b>cas de harcèlement</b>. Protocole : protéger l'élève, ne pas le confronter à l'auteur, informer les familles, réunir l'équipe, surveiller les temps non couverts, tracer. <b>pHARe</b>.</td><td style="color:#991b1b">Traiter ça comme une simple dispute</td></tr>
+</table>
+
+<h3 class='lz'>⑥ Les 5 erreurs à ne pas commettre</h3>
+<div class="erreur"><p><span class="x">❌ « La laïcité, c'est interdire les religions »</span><br><span class="v">✅ La laïcité <b>garantit</b> la liberté de conscience. Elle interdit à l'État de prendre parti — pas aux élèves de croire.</span></p><p><span class="x">❌ « Ça ne me concerne pas, c'est le rôle de l'IEN »</span><br><span class="v">✅ Le directeur est <b>le garant de la laïcité dans son école</b>. Ne rien faire, c'est déjà une décision.</span></p><p><span class="x">❌ « J'interdirais tout signe, pour être tranquille »</span><br><span class="v">✅ Un directeur n'invente pas de règle. Il applique <b>le droit existant</b> — et il le connaît.</span></p><p><span class="x">❌ « La laïcité, c'est mon affaire personnelle »</span><br><span class="v">✅ C'est une <b>obligation de fonction</b>, pas une opinion. Et elle s'applique à toi en premier.</span></p><p><span class="x">❌ « Avec ces familles, c'est impossible »</span><br><span class="v">✅ C'est un <b>jugement sur les personnes</b>. Le jury l'entend comme un renoncement.</span></p></div>
+
+<h3 class='lz'>⑦ Les 7 textes à savoir citer</h3>
+<div class="txt"><div class="i"><b class="n">Constitution, article 1<sup>er</sup></b>« La France est une République indivisible, <b>laïque</b>, démocratique et sociale. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion. Elle <b>respecte toutes les croyances</b>. »</div><div class="i"><b class="n">Loi du 9 décembre 1905</b>Séparation des Églises et de l'État. Article 1<sup>er</sup> : « La République assure la <b>liberté de conscience</b>. Elle garantit le libre exercice des cultes… »</div><div class="i"><b class="n">Loi du 15 mars 2004</b>Dans les écoles, collèges et lycées publics, le port de <b>signes ou tenues manifestant ostensiblement une appartenance religieuse</b> est interdit aux élèves.</div><div class="i"><b class="n">Code de l'éducation, art. L. 111-1</b>L'école <b>respecte la personne et les convictions</b> de l'élève, et fait partager les valeurs de la République.</div><div class="i"><b class="n">Loi n° 83-634 du 13 juillet 1983, art. 25</b>Le fonctionnaire exerce ses fonctions avec <b>dignité, impartialité, intégrité et probité</b> — et est tenu à la <b>neutralité</b>.</div><div class="i"><b class="n">Charte de la laïcité à l'école (2013)</b>15 articles affichés dans toutes les écoles. C'est <b>l'outil de dialogue</b> avec les élèves et les familles.</div><div class="i"><b class="n">Loi du 24 août 2021</b>Conforte le respect des principes de la République : renforce la formation des personnels et le traitement des atteintes à la laïcité.</div></div>
+
+<div class="fin">
+  <h3>Les 3 phrases à retenir</h3>
+  <p><b>1.</b> « La laïcité ne m'oblige pas à taire ce que je crois : elle m'oblige à ne pas m'en servir. »</p>
+  <p><b>2.</b> « Le risque, ce n'est pas l'élève croyant : c'est le traitement inégal. C'est ça que je surveille. »</p>
+  <p><b>3.</b> « Un directeur ne réduit pas la laïcité à des interdits : il en fait une règle du vivre ensemble — et ça s'apprend. »</p>
+</div>
+
+
+
+    <h3 class="lz" style="margin-top:26px">⑧ Les 20 cas concrets — clique sur une question pour voir la réponse</h3>
+    <div class="lz-barre">
+      <button onclick="lzTout(true)">Tout déplier</button>
+      <button class="alt" onclick="lzTout(false)">Tout replier</button>
+      <button class="alt" onclick="lzHasard()">🎲 Une question au hasard</button>
+    </div>
+
+    
+
+
+
+<div class="intro">
+  <b>⚠️ La distinction qui gouverne tout ce document</b><br>
+  <b>Les élèves</b> relèvent de la <b>loi de 2004</b> : seuls les signes <b>ostensibles</b> sont interdits.<br>
+  <b>Les adultes de l'école</b> relèvent de la <b>neutralité des agents publics</b> : <b>aucun signe</b>, sans exception.<br>
+  <b>Les parents</b> ne relèvent d'<b>aucune</b> interdiction : ce sont des usagers.<br><br>
+  Confondre ces trois régimes, c'est la faute la plus fréquente — et c'est celle qui fait le plus de dégâts.
+</div>
+
+<h3 class='lz'>⑧ Le tableau de synthèse — à retenir en premier</h3>
+<table>
+  <tr><th style="width:19%">Qui</th><th style="width:26%">Régime</th><th style="width:25%">Signes</th><th>Ce que fait le directeur</th></tr>
+  <tr><td><b>Les élèves</b></td><td>Loi du 15 mars 2004</td><td>Signes <b>ostensibles</b> interdits</td><td>Entretien → famille → IEN</td></tr><tr><td><b>Enseignants</b></td><td>Neutralité (statut)</td><td><b>Aucun</b> signe, sans exception</td><td>Entretien → IEN</td></tr><tr><td><b>AESH</b></td><td>Neutralité (agent public)</td><td><b>Aucun</b> signe</td><td>Entretien → IEN + employeur</td></tr><tr><td><b>Le directeur</b></td><td>Neutralité + garantie</td><td><b>Aucun</b> signe</td><td>Son exemple d'abord</td></tr><tr><td><b>Les parents</b></td><td>Usagers</td><td><b>Aucune</b> interdiction</td><td>Accueil normal</td></tr><tr><td><b>Accompagnateurs</b></td><td>Bénévoles</td><td><b>Aucune</b> interdiction</td><td>Cadre de discrétion</td></tr><tr><td><b>Intervenants</b></td><td>Contrat + charte</td><td>Neutralité <b>contractuelle</b></td><td>Fin d'intervention + signalement</td></tr>
+</table>
+
+<h3 class='lz' style='color:#2563eb'>A · LES ÉLÈVES</h3><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">1</span><span class="qt">Une élève de CM2 arrive avec un voile.</span></div><div class="rep">La loi du 15 mars 2004 interdit à l'école publique les signes ou tenues manifestant <b>ostensiblement</b> une appartenance religieuse. Le directeur doit agir — mais d'abord <b>par le dialogue</b>.</div><div class="lab">Ce que je fais</div><ul><li>Entretien <b>individuel et calme</b>, jamais devant la classe.</li><li>J'explique <b>la règle</b> et je laisse un <b>temps</b> pour l'enlever, sans humiliation.</li><li>J'informe la <b>famille le jour même</b> et je propose un rendez-vous.</li><li>Je <b>trace</b> : date, faits, ce que j'ai dit, la réponse.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Lui arracher le foulard, la renvoyer chez elle, ou la laisser entrer « pour ne pas créer d'incident » — les deux sont des fautes.</div><div class="txtx"><b>Texte :</b> Loi du 15 mars 2004</div></div><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">2</span><span class="qt">Elle refuse de l'enlever, et la famille soutient son refus.</span></div><div class="rep">La scolarité n'est <b>pas rompue automatiquement</b>. Le directeur poursuit le dialogue et <b>saisit l'IEN</b> : c'est l'échelon supérieur qui décide de la suite.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>réunis la famille</b> avec l'IEN si possible.</li><li>Je continue à <b>accueillir l'élève</b> dans l'attente : elle reste une élève de l'école.</li><li>Je <b>relate par écrit</b> chaque étape au fur et à mesure.</li><li>Je <b>protège l'élève</b> des remarques des autres pendant tout ce temps.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Prononcer une exclusion : ce n'est pas le pouvoir du directeur, et ce n'est pas automatique.</div><div class="txtx"><b>Texte :</b> Procédure : dialogue → IEN → DASEN</div></div><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">3</span><span class="qt">Une élève porte un bandana « pour cacher ses cheveux », pas par religion.</span></div><div class="rep">Le critère n'est pas l'objet, c'est <b>l'intention manifestée</b>. Un bandana peut être licite — sauf s'il manifeste ostensiblement une appartenance religieuse.</div><div class="lab">Ce que je fais</div><ul><li>J'<b>interroge</b> avant de conclure : pourquoi, depuis quand, que dit la famille ?</li><li>Je <b>ne présume pas</b> : une coiffure, un bandana de sport, un bonnet n'ont rien d'interdit en soi.</li><li>Si le doute persiste, j'en <b>parle à l'IEN</b> plutôt que de trancher seul.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Interdire « par précaution ». Une interdiction sans base est une faute — et c'est exactement ce qui donne le sentiment d'arbitraire.</div><div class="txtx"><b>Texte :</b> Loi de 2004 : le critère est le <b>caractère ostensible</b></div></div><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">4</span><span class="qt">Deux élèves se moquent d'une camarade voilée, ou d'un camarade qui ne croit pas.</span></div><div class="rep">C'est du <b>harcèlement</b>, pas une simple dispute. Le directeur applique le protocole, pas une punition rapide.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>protège</b> l'élève visé, et je ne le confronte pas à ses auteurs.</li><li>Je <b>réunis l'équipe</b> et j'informe les familles.</li><li>Je <b>surveille les temps non couverts</b> : cour, couloirs, cantine, entrée.</li><li>Je <b>trace</b> et je m'appuie sur le dispositif <b>pHARe</b>.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Traiter ça comme un conflit ordinaire entre enfants.</div><div class="txtx"><b>Texte :</b> Protocole harcèlement · pHARe</div></div><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">5</span><span class="qt">Un élève refuse d'assister au cours d'éducation à la sexualité.</span></div><div class="rep">Ce n'est pas un droit général de dispense. Un <b>droit de retrait</b> existe pour ce thème précis, prévu par les textes — le directeur le vérifie et l'applique s'il s'applique.</div><div class="lab">Ce que je fais</div><ul><li>J'<b>écoute</b> la famille et je demande la raison exacte.</li><li>Je <b>vérifie le texte applicable</b> avant de répondre — je ne réponds jamais de mémoire sur un droit.</li><li>Je <b>propose un accueil alternatif</b> pendant l'heure concernée plutôt qu'une absence.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Répondre « oui » ou « non » sans avoir vérifié : c'est là qu'on se trompe.</div><div class="txtx"><b>Texte :</b> À vérifier au cas par cas dans les textes en vigueur</div></div><div class="qr" style="--c:#2563eb"><div class="qh"><span class="qn">6</span><span class="qt">Un élève demande à ne pas faire piscine « pour raison religieuse ».</span></div><div class="rep">La religion <b>n'est pas un motif de dispense d'EPS</b>. En revanche, un aménagement peut exister pour raison de santé ou de pudeur, sur avis médical.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>distingue</b> : santé (dispense possible) / religion (pas un motif).</li><li>Je <b>cherche une solution</b> : tenue adaptée, organisation, dialogue avec l'enseignant d'EPS.</li><li>Je <b>ne laisse pas</b> l'élève s'installer dans une non-participation durable.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Accorder la dispense « pour éviter le conflit » : ça crée un précédent et ça isole l'élève.</div><div class="txtx"><b>Texte :</b> Obligation scolaire · EPS obligatoire</div></div><h3 class='lz' style='color:#c0392b'>B · LES ADULTES DE L'ÉCOLE — le cœur de ta question</h3><div class="qr" style="--c:#c0392b"><div class="qh"><span class="qn">7</span><span class="qt">Une collègue enseignante porte le voile en classe.</span></div><div class="rep">⚠️ <b>Ce n'est pas la loi de 2004.</b> Un enseignant est un <b>agent public</b> : il est soumis à une obligation de <b>neutralité totale</b> — pas seulement aux signes « ostensibles ». <b>Aucun signe d'appartenance, quelle que soit sa taille.</b></div><div class="lab">Ce que je fais</div><ul><li>Entretien <b>en tête-à-tête d'abord</b> : jamais devant les élèves, jamais devant les collègues.</li><li>Je <b>rappelle le cadre</b> avec respect et sans accusation.</li><li>Je <b>trace</b> l'entretien et ce qui a été dit.</li><li>Si le refus persiste, je <b>signale à l'IEN</b> — car <b>je n'ai pas de pouvoir hiérarchique</b>.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> La <b>sanctionner</b> : tu ne peux pas (pas d'autorité hiérarchique). La <b>couvrir</b> : tu ne dois pas. Le seul geste juste est : parler, tracer, signaler.</div><div class="txtx"><b>Texte :</b> Neutralité des agents publics — loi n° 83-634 du 13 juillet 1983, art. 25</div></div><div class="qr" style="--c:#c0392b"><div class="qh"><span class="qn">8</span><span class="qt">Et si l'enseignante dit : « c'est mon droit, je suis croyante. »</span></div><div class="rep">Le droit de croire est <b>entier</b> et protégé. Ce qui est limité, c'est <b>l'exercice de sa fonction</b> avec un signe d'appartenance.</div><div class="lab">Ce que je fais</div><ul><li>Je formule la distinction : « Ta croyance est libre. Ta fonction est neutre. »</li><li>Je ne me place pas sur le terrain de la foi, mais sur celui du <b>statut</b>.</li><li>Je propose les ressources : <b>référent laïcité</b>, formation, accompagnement.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Entrer dans un débat théologique. Ça ne se gagne jamais, et ça sort du cadre.</div><div class="txtx"><b>Texte :</b> Liberté de conscience ≠ neutralité de la fonction</div></div><div class="qr" style="--c:#c0392b"><div class="qh"><span class="qn">9</span><span class="qt">Un collègue fait du prosélytisme : il parle de sa religion aux élèves.</span></div><div class="rep">C'est une atteinte au principe de neutralité <b>et</b> à la liberté de conscience des élèves. C'est plus grave qu'un signe, parce que ça agit sur les élèves.</div><div class="lab">Ce que je fais</div><ul><li>J'<b>interromps</b> : entretien immédiat, faits précis, datés.</li><li>Je <b>protège les élèves</b> : je vérifie qu'aucun n'a subi de pression.</li><li>Je <b>signale à l'IEN</b> — c'est lui qui a le pouvoir d'agir.</li><li>Je <b>trace</b> avec précision : un signalement sans faits ne sert à rien.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Attendre « de voir si ça recommence ». Chaque semaine d'attente expose des élèves.</div><div class="txtx"><b>Texte :</b> Neutralité · liberté de conscience des élèves</div></div><div class="qr" style="--c:#c0392b"><div class="qh"><span class="qn">10</span><span class="qt">Une AESH porte le voile.</span></div><div class="rep">L'AESH est un <b>agent public</b> (contractuel de droit public) : <b>même obligation de neutralité</b> que l'enseignant.</div><div class="lab">Ce que je fais</div><ul><li>Je lui parle <b>seule, en premier</b>, avec respect — c'est un adulte qui travaille.</li><li>Je <b>rappelle le cadre</b> de sa fonction.</li><li>Je <b>signale</b> à l'IEN et à l'employeur si nécessaire.</li><li>Je <b>ne la laisse pas</b> sans accompagnement : elle peut avoir besoin d'être orientée.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> « Ce n'est pas mon personnel, ce n'est pas mon affaire. » Faux : dans l'école, c'est le directeur qui garantit le cadre.</div><div class="txtx"><b>Texte :</b> Agent public contractuel de droit public → neutralité</div></div><div class="qr" style="--c:#c0392b"><div class="qh"><span class="qn">11</span><span class="qt">Le directeur lui-même — est-ce que ça te concerne ?</span></div><div class="rep"><b>Oui, et en premier.</b> Tu es agent public, et tu es de plus <b>le garant</b> de la laïcité dans ton école. Ton exemple vaut plus que dix circulaires.</div><div class="lab">Ce que je fais</div><ul><li>Je ne porte aucun signe d'appartenance dans l'exercice de mes fonctions.</li><li>Je ne manifeste pas mes convictions devant les élèves ni devant l'équipe.</li><li>Je <b>dis à mon équipe</b> que j'applique la règle à moi-même d'abord.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Penser que la laïcité ne concerne que les autres. C'est la première chose que l'IEN regarde.</div><div class="txtx"><b>Texte :</b> Statut + fonction de garant</div></div><h3 class='lz' style='color:#1a7a4a'>C · LES FAMILLES ET LES TIERS</h3><div class="qr" style="--c:#1a7a4a"><div class="qh"><span class="qn">12</span><span class="qt">Une mère voilée vient chercher son enfant / assister à une réunion.</span></div><div class="rep">⚠️ <b>Elle peut entrer.</b> Les parents ne sont <b>pas</b> soumis à la neutralité : ce sont des <b>usagers</b>. Aucun texte n'interdit le voile aux parents dans l'enceinte de l'école.</div><div class="lab">Ce que je fais</div><ul><li>Je l'<b>accueille normalement</b> — c'est la règle.</li><li>Si un collègue s'y oppose, <b>je le recadre</b> : l'interdiction n'existe pas.</li><li>Je <b>rappelle le cadre</b> à l'équipe en conseil des maîtres pour éviter les erreurs.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Interdire l'entrée à une mère voilée. C'est une faute — et c'est exactement ce qui fait dire aux familles que la laïcité les vise.</div><div class="txtx"><b>Texte :</b> Parents = usagers, non soumis à la neutralité</div></div><div class="qr" style="--c:#1a7a4a"><div class="qh"><span class="qn">13</span><span class="qt">Une mère voilée veut accompagner une sortie scolaire.</span></div><div class="rep">Elle le <b>peut</b>. Les parents accompagnateurs ne sont pas des agents publics : pas d'obligation de neutralité. Ils sont tenus à la <b>discrétion</b> et au respect du cadre.</div><div class="lab">Ce que je fais</div><ul><li>J'<b>accepte</b> et je le dis clairement à l'équipe.</li><li>Je <b>fixe le cadre</b> : pas de prosélytisme pendant l'activité, respect du programme.</li><li>Je <b>trace</b> la règle dans le document d'organisation des sorties.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Refuser « par principe ». C'est une discrimination, et ça se retourne contre l'école.</div><div class="txtx"><b>Texte :</b> Parents accompagnateurs ≠ agents publics</div></div><div class="qr" style="--c:#1a7a4a"><div class="qh"><span class="qn">14</span><span class="qt">Un intervenant extérieur (sport, musique, théâtre) fait du prosélytisme.</span></div><div class="rep">Il est tenu par le <b>contrat</b> et la <b>charte</b> signée avec l'école. Le directeur peut <b>mettre fin à l'intervention</b>.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>mets fin</b> à la séance immédiatement si des élèves sont exposés.</li><li>Je <b>signale</b> à l'IEN et à l'organisme employeur.</li><li>Je <b>vérifie</b> que la charte d'intervention a bien été signée avant toute intervention.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Attendre la fin du cycle pour « ne pas déranger ».</div><div class="txtx"><b>Texte :</b> Contrat + charte d'intervention</div></div><div class="qr" style="--c:#1a7a4a"><div class="qh"><span class="qn">15</span><span class="qt">Une famille demande un menu confessionnel à la cantine.</span></div><div class="rep">La restauration scolaire relève de la <b>commune</b>. Le directeur <b>transmet</b>, il ne décide pas.</div><div class="lab">Ce que je fais</div><ul><li>J'<b>écoute</b> la demande sans la juger.</li><li>Je <b>transmets</b> à la mairie et je le dis à la famille.</li><li>J'<b>explique</b> que l'école ne gère pas les menus.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Promettre un menu, ou répondre sèchement « il n'y en a pas ». Les deux créent un conflit.</div><div class="txtx"><b>Texte :</b> Compétence communale</div></div><div class="qr" style="--c:#1a7a4a"><div class="qh"><span class="qn">16</span><span class="qt">Une famille demande une dispense de piscine pour sa fille « par pudeur religieuse ».</span></div><div class="rep">Voir la question A6 : la religion n'est pas un motif de dispense d'EPS. Mais <b>écouter</b> et <b>chercher un aménagement</b> (tenue, organisation) fait partie du métier.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>reçois</b> la famille et j'écoute ce qui gêne réellement.</li><li>Je <b>cherche une solution pratique</b> avec l'enseignant d'EPS.</li><li>Je <b>ne laisse pas</b> la situation s'installer sans réponse.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Renvoyer la famille sans explication : elle reviendra, ou l'élève décrochera.</div><div class="txtx"><b>Texte :</b> Obligation scolaire</div></div><h3 class='lz' style='color:#b8860b'>D · LES RÉFLEXES DU DIRECTEUR</h3><div class="qr" style="--c:#b8860b"><div class="qh"><span class="qn">17</span><span class="qt">Que fais-je en premier, dans tous les cas ?</span></div><div class="rep"><b>J'écoute avant d'appliquer.</b> Un fait mal compris produit une décision injuste — et une décision injuste abîme la laïcité plus qu'un signe.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>sépare les faits</b> des impressions : qui, quoi, quand, où, devant qui.</li><li>Je <b>parle à la personne concernée d'abord</b>, jamais d'elle d'abord.</li><li>Je <b>trace</b> avant d'agir, pas après.</li><li>Je <b>me demande</b> : « est-ce que j'aurais fait pareil pour un autre élève ? »</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Agir vite pour « montrer que je tiens le cadre ». La précipitation est le meilleur moyen de mal appliquer.</div></div><div class="qr" style="--c:#b8860b"><div class="qh"><span class="qn">18</span><span class="qt">Quels sont mes pouvoirs réels — et mes limites ?</span></div><div class="rep">Le directeur a une <b>autorité fonctionnelle</b>, <b>pas hiérarchique</b>. Sur un adulte, il ne peut ni sanctionner ni noter : il <b>parle</b>, il <b>trace</b>, il <b>signale</b>.</div><div class="lab">Ce que je fais</div><ul><li>Sur un <b>élève</b> : entretien, dialogue famille, procédure, IEN.</li><li>Sur un <b>adulte</b> : entretien, rappel du cadre, trace, <b>signalement à l'IEN</b>.</li><li>Sur un <b>tiers</b> : contrat, charte, fin d'intervention, signalement.</li><li>Dans <b>tous</b> les cas : la trace écrite.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Croire qu'on peut « régler » un adulte soi-même. C'est l'erreur qui fait perdre un directeur débutant.</div><div class="txtx"><b>Texte :</b> Loi Rilhac : autorité fonctionnelle ≠ hiérarchique</div></div><div class="qr" style="--c:#b8860b"><div class="qh"><span class="qn">19</span><span class="qt">Comment éviter l'application inégale — le vrai risque ?</span></div><div class="rep">En se posant la question <b>à chaque fois</b>. La laïcité se dégrade non pas dans les textes, mais dans <b>la manière</b> : qui on reprend, qui on regarde, qui on soupçonne.</div><div class="lab">Ce que je fais</div><ul><li>Je <b>vérifie la symétrie</b> : est-ce que je fais la même remarque à tout le monde ?</li><li>Je <b>ne commente jamais</b> l'apparence d'un élève devant les autres.</li><li>Je <b>rappelle à l'équipe</b> que la règle s'applique à tous, également.</li><li>Je <b>trace</b> aussi les situations où je n'ai <b>rien</b> fait : ça montre la cohérence.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Laisser un collègue traiter certains élèves plus durement « parce que c'est culturel ». Ça, c'est la dérive.</div><div class="txtx"><b>Texte :</b> Principe d'égalité — Constitution, art. 1<sup>er</sup></div></div><div class="qr" style="--c:#b8860b"><div class="qh"><span class="qn">20</span><span class="qt">Et si moi, personnellement, je trouve ça injuste ?</span></div><div class="rep">Tu as le droit de le penser, et beaucoup le pensent. Mais <b>en fonction</b>, tu appliques le cadre — et tu peux le faire <b>avec humanité</b>, ce qui n'est pas la même chose que l'appliquer mal.</div><div class="lab">Ce que je fais</div><ul><li>J'applique la règle, <b>sans humilier</b>.</li><li>Je <b>dis à mon équipe</b> ce que je pense du risque d'inégalité — sans jamais contester le cadre devant les élèves.</li><li>Je <b>choisis mes mots</b> : la façon d'appliquer une règle peut la rendre supportable ou insupportable.</li></ul><div class="conf"><b class="cl">⚠️ La confusion à éviter</b> Contester le cadre devant les élèves ou devant l'inspecteur. Ce n'est pas ton rôle, et ça fragilise ta position.</div><div class="txtx"><b>Texte :</b> Obligation de loyauté du fonctionnaire</div></div>
+
+<div class="fin">
+  <h3>Les 3 règles d'or du directeur</h3>
+  <p><b>1.</b> « Je parle d'abord à la personne, jamais d'elle. » — Un entretien individuel et calme avant toute décision.</p>
+  <p><b>2.</b> « Je n'ai pas de pouvoir hiérarchique sur un adulte : je parle, je trace, je signale à l'IEN. » — C'est le cadre, pas une faiblesse.</p>
+  <p><b>3.</b> « La même règle, appliquée de la même façon à tous. » — La laïcité se dégrade dans la manière, pas dans les textes.</p>
+</div>
+
+
+
+  </section>
+
+  <!-- ══════════ 24. TEXTES OFFICIELS ══════════ -->
   <section id="textes">
     <div class="kicker">Section 21 — La base juridique : pour te référer à tout moment</div>
     <h2>📚 Les textes officiels & les liens directs</h2>
@@ -4457,6 +4681,33 @@
   window.piRep = function(){ $("pi-rep").classList.toggle("on"); };
   montre();
   $("pi-quest").textContent = "Appuie sur « ▶ Question suivante » pour commencer.";
+})();
+</script>
+
+
+<script>
+/* ══════════ LAÏCITÉ — accordéon des 20 cas ══════════ */
+(function(){
+  var cartes = document.querySelectorAll('#laicite .qr');
+  cartes.forEach(function(q){
+    var h = document.createElement('div');
+    h.className = 'qr-hint';
+    h.textContent = '\uD83D\uDC46 Clique pour voir la réponse';
+    q.appendChild(h);
+    q.addEventListener('click', function(){ q.classList.toggle('open'); });
+  });
+  window.lzTout = function(ouvrir){
+    document.querySelectorAll('#laicite .qr').forEach(function(q){
+      q.classList.toggle('open', ouvrir);
+    });
+  };
+  window.lzHasard = function(){
+    var r = document.querySelectorAll('#laicite .qr');
+    if (!r.length) return;
+    var c = r[Math.floor(Math.random() * r.length)];
+    c.classList.add('open');
+    c.scrollIntoView({behavior:'smooth', block:'center'});
+  };
 })();
 </script>
 
